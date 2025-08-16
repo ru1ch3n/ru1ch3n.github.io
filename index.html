@@ -18,7 +18,6 @@
   <nav class="container" aria-label="Main Navigation">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="index.html#home-news">News</a></li>
       <li><a href="bio.html">Bio</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="papers.html">Papers</a></li>
@@ -30,36 +29,12 @@
 
 <main class="container">
 
-  <!-- 1) Introduction -->
-  <section>
-    <h2>Introduction</h2>
-    <p>
-      I am a Ph.D. candidate in Computational Applied Mathematics at Stony Brook University.
-      My research focuses on machine learning for PDEs, neural operators, and stochastic optimization.
-      I work on data-efficient operator-learning frameworks and optimization strategies
-      (e.g., simulated annealing guided by reinforcement learning) to improve cross-resolution generalization
-      and computational performance in scientific modeling.
-    </p>
-  </section>
-
-  <!-- 2) Contact -->
-  <section>
-    <h2>Contact</h2>
-    <ul>
-      <li>Phone: +1 (530) 400-2166</li>
-      <li>Email: ruichen.xu@stonybrook.edu</li>
-      <li>Google Scholar: <a href="https://scholar.google.com/citations?user=IBXYwoQAAAAJ" target="_blank" rel="noopener">My Google Scholar profile</a></li>
-    </ul>
-    <p><a href="assets/Ruichen_Xu_CV.pdf" class="code">Download full CV (PDF)</a></p>
-  </section>
-
-  <!-- 3) News (auto-imported from news.html) -->
+  <!-- News (auto-imported from news.html) -->
   <section id="home-news" aria-labelledby="home-news-heading">
     <h2 id="home-news-heading">News</h2>
     <ul id="news-list-home">
       <li>Loading latest news…</li>
     </ul>
-    <p class="small">Full archive on the <a href="news.html">News page</a>.</p>
     <noscript>
       <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
     </noscript>
@@ -104,7 +79,7 @@
       // Replace placeholder
       dest.innerHTML = '';
 
-      // Clone ALL items (show everything on the home page)
+      // Clone ALL items (show everything)
       srcList.querySelectorAll(':scope > li').forEach(li => {
         dest.appendChild(li.cloneNode(true));
       });
