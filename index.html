@@ -48,7 +48,7 @@
     <ul>
       <li>Phone: +1 (530) 400-2166</li>
       <li>Email: ruichen.xu@stonybrook.edu</li>
-      <li>Google Scholar: <a href="https://scholar.google.com/citations?user=IBXYwoQAAAAJ" target="_blank" rel="noopener">My Google Scholar Profile</a></li>
+      <li>Google Scholar: <a href="https://scholar.google.com/citations?user=IBXYwoQAAAAJ" target="_blank" rel="noopener">My Google Scholar profile</a></li>
     </ul>
     <p><a href="assets/Ruichen_Xu_CV.pdf" class="code">Download full CV (PDF)</a></p>
   </section>
@@ -73,7 +73,7 @@
   </div>
 </footer>
 
-<!-- Auto-import ALL News items from news.html and add authorship note -->
+<!-- Auto-import ALL News items from news.html -->
 <script>
 (function () {
   const DEST_SELECTOR = '#news-list-home';
@@ -108,20 +108,6 @@
       srcList.querySelectorAll(':scope > li').forEach(li => {
         dest.appendChild(li.cloneNode(true));
       });
-
-      // Add authorship note under the FIRST item (NYSDS acceptances)
-      const firstItem = dest.querySelector(':scope > li');
-      if (firstItem) {
-        const note = document.createElement('p');
-        note.className = 'small';
-        note.style.marginTop = '0.25rem';
-        note.innerHTML = 'Note: I am the <strong>co-corresponding author</strong> on all three NYSDS papers ' +
-          '(and <strong>first author</strong> on the second), working with ' +
-          '<a href="https://www.linkedin.com/in/maximilian-cederholm-1b3a77336/" target="_blank" rel="noopener">Max Cederholm</a>, ' +
-          '<a href="https://www.linkedin.com/in/claire-yu-177b44289/" target="_blank" rel="noopener">Claire Yu</a>, and ' +
-          '<a href="https://www.linkedin.com/in/albertdingg/" target="_blank" rel="noopener">Albert Ding</a>.';
-        firstItem.appendChild(note);
-      }
     })
     .catch(err => {
       console.error('Failed to load news:', err);
