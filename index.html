@@ -18,6 +18,7 @@
   <nav class="container" aria-label="Main Navigation">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="index.html#home-news">News</a></li><!-- NEW: in-page link to the home News section -->
       <li><a href="bio.html">Bio</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="papers.html">Papers</a></li>
@@ -28,6 +29,18 @@
 </header>
 
 <main class="container">
+
+  <!-- News on Home (auto-imported from news.html) — now first section -->
+  <section id="home-news" aria-labelledby="home-news-heading">
+    <h2 id="home-news-heading">News</h2>
+    <ul id="news-list-home">
+      <li>Loading latest news…</li>
+    </ul>
+    <p class="small">Full archive on the <a href="news.html">News page</a>.</p>
+    <noscript>
+      <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
+    </noscript>
+  </section>
 
   <!-- Intro -->
   <section>
@@ -61,18 +74,6 @@
     </ul>
   </section>
 
-  <!-- News on Home (auto-imported from news.html) -->
-  <section aria-labelledby="home-news-heading">
-    <h2 id="home-news-heading">News</h2>
-    <ul id="news-list-home">
-      <li>Loading latest news…</li>
-    </ul>
-    <p class="small">See the full archive on the <a href="news.html">News page</a>.</p>
-    <noscript>
-      <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
-    </noscript>
-  </section>
-
 </main>
 
 <footer>
@@ -81,13 +82,13 @@
   </div>
 </footer>
 
-<!-- Auto-import ALL News items from news.html, no truncation, and add authorship note -->
+<!-- Auto-import ALL News items from news.html and add authorship note -->
 <script>
 (function () {
   const DEST_SELECTOR = '#news-list-home';
 
   function findNewsSection(doc) {
-    // Prefer explicit id if present
+    // Prefer explicit id if present: <section id="news">
     let sec = doc.querySelector('#news');
     if (sec) return sec;
     // Fallback: first section whose h2 text is "News"
@@ -112,7 +113,7 @@
       // Replace placeholder
       dest.innerHTML = '';
 
-      // Clone ALL items (no "more" truncation)
+      // Clone ALL items (show more news on home page)
       srcList.querySelectorAll(':scope > li').forEach(li => {
         dest.appendChild(li.cloneNode(true));
       });
