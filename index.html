@@ -18,7 +18,7 @@
   <nav class="container" aria-label="Main Navigation">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="index.html#home-news">News</a></li><!-- NEW: in-page link to the home News section -->
+      <li><a href="index.html#home-news">News</a></li>
       <li><a href="bio.html">Bio</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="papers.html">Papers</a></li>
@@ -30,19 +30,7 @@
 
 <main class="container">
 
-  <!-- News on Home (auto-imported from news.html) — now first section -->
-  <section id="home-news" aria-labelledby="home-news-heading">
-    <h2 id="home-news-heading">News</h2>
-    <ul id="news-list-home">
-      <li>Loading latest news…</li>
-    </ul>
-    <p class="small">Full archive on the <a href="news.html">News page</a>.</p>
-    <noscript>
-      <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
-    </noscript>
-  </section>
-
-  <!-- Intro -->
+  <!-- 1) Introduction -->
   <section>
     <h2>Introduction</h2>
     <p>
@@ -54,7 +42,7 @@
     </p>
   </section>
 
-  <!-- Contact + Quick Links -->
+  <!-- 2) Contact -->
   <section>
     <h2>Contact</h2>
     <ul>
@@ -65,13 +53,16 @@
     <p><a href="assets/Ruichen_Xu_CV.pdf" class="code">Download full CV (PDF)</a></p>
   </section>
 
-  <section>
-    <h2>Quick Links</h2>
-    <ul>
-      <li><a href="papers.html">Selected Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="research.html">Research Interests</a></li>
+  <!-- 3) News (auto-imported from news.html) -->
+  <section id="home-news" aria-labelledby="home-news-heading">
+    <h2 id="home-news-heading">News</h2>
+    <ul id="news-list-home">
+      <li>Loading latest news…</li>
     </ul>
+    <p class="small">Full archive on the <a href="news.html">News page</a>.</p>
+    <noscript>
+      <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
+    </noscript>
   </section>
 
 </main>
@@ -113,7 +104,7 @@
       // Replace placeholder
       dest.innerHTML = '';
 
-      // Clone ALL items (show more news on home page)
+      // Clone ALL items (show everything on the home page)
       srcList.querySelectorAll(':scope > li').forEach(li => {
         dest.appendChild(li.cloneNode(true));
       });
