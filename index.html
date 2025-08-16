@@ -81,19 +81,17 @@
   </div>
 </footer>
 
-<!-- Auto-import News list from news.html -->
+<!-- Auto-import ALL News items from news.html, no truncation, and add authorship note -->
 <script>
 (function () {
   const DEST_SELECTOR = '#news-list-home';
-  const MAX_ITEMS = 2; // <- change this to show more/less items on the home page
 
   function findNewsSection(doc) {
-    // Prefer an explicit id if you add it: <section id="news">…</section>
+    // Prefer explicit id if present
     let sec = doc.querySelector('#news');
     if (sec) return sec;
-    // Fallback: pick the first <section> whose <h2> text is "News"
-    const sections = Array.from(doc.querySelectorAll('section'));
-    for (const s of sections) {
+    // Fallback: first section whose h2 text is "News"
+    for (const s of doc.querySelectorAll('section')) {
       const h2 = s.querySelector('h2');
       if (h2 && /news/i.test(h2.textContent.trim())) return s;
     }
@@ -106,26 +104,32 @@
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
       const newsSection = findNewsSection(doc);
-      const ul = newsSection ? newsSection.querySelector('ul') : null;
+      const srcList = newsSection ? newsSection.querySelector('ul') : null;
       const dest = document.querySelector(DEST_SELECTOR);
 
-      if (!ul || !dest) throw new Error('News list not found');
+      if (!srcList || !dest) throw new Error('News list not found');
 
-      // Replace placeholder content
+      // Replace placeholder
       dest.innerHTML = '';
 
-      // Clone the first N items
-      const items = ul.querySelectorAll(':scope > li');
-      const n = Math.min(items.length, MAX_ITEMS);
-      for (let i = 0; i < n; i++) dest.appendChild(items[i].cloneNode(true));
+      // Clone ALL items (no "more" truncation)
+      srcList.querySelectorAll(':scope > li').forEach(li => {
+        dest.appendChild(li.cloneNode(true));
+      });
 
-      // Add a "... more" link if there are additional items
-      if (items.length > n) {
-        const more = document.createElement('li');
-        more.innerHTML = '… <a href="news.html">more</a>';
-        dest.appendChild(more);
+      // Add authorship note under the FIRST item (NYSDS acceptances)
+      const firstItem = dest.querySelector(':scope > li');
+      if (firstItem) {
+        const note = document.createElement('p');
+        note.className = 'small';
+        note.style.marginTop = '0.25rem';
+        note.innerHTML = 'Note: I am the <strong>co-corresponding author</strong> on all three NYSDS papers ' +
+          '(and <strong>first author</strong> on the second), working with ' +
+          '<a href="https://www.linkedin.com/in/maximilian-cederholm-1b3a77336/" target="_blank" rel="noopener">Max Cederholm</a>, ' +
+          '<a href="https://www.linkedin.com/in/claire-yu-177b44289/" target="_blank" rel="noopener">Claire Yu</a>, and ' +
+          '<a href="https://www.linkedin.com/in/albertdingg/" target="_blank" rel="noopener">Albert Ding</a>.';
+        firstItem.appendChild(note);
       }
-
     })
     .catch(err => {
       console.error('Failed to load news:', err);
