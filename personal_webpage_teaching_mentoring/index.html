@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruichen Xu — Home</title>
+  <meta name="description" content="Ruichen Xu — Personal academic page">
+  <meta name="generator" content="static-html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1 class="site-title">Ruichen Xu</h1>
+    <p class="site-subtitle">Ph.D. candidate · Computational Applied Mathematics, Stony Brook University</p>
+  </div>
+  <nav class="container" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="research.html">Research &amp; Papers</a></li>
+      
+      <li><a href="teaching.html">Teaching &amp; Mentoring</a></li>
+      <li><a href="assets/Ruichen_Xu_CV.pdf">CV (PDF)</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section id="hero" class="hero">
+    <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+      <img src="assets/profile.jpg" alt="Portrait of Ruichen Xu" style="width:140px;height:140px;object-fit:cover;border-radius:50%;border:1px solid #e3e3e3;">
+      <div>
+        <h2 style="margin:0 0 6px 0;">Hi! I'm Ruichen Xu</h2>
+        <p style="margin:0;">Ph.D. candidate in Computational Applied Mathematics at Stony Brook University. I build reliable scientific-ML systems for PDEs, neural operators, and optimization/sampling.</p>
+        <p style="margin:6px 0 0 0;"><a href="assets/Ruichen_Xu_CV.pdf">CV (PDF)</a></p>
+      </div>
+    </div>
+  </section>
+  <section id="people">
+    <h2>People</h2>
+    <ul>
+      <li><strong>Advisor:</strong> <a href="https://you.stonybrook.edu/yuefandeng/" target="_blank" rel="noopener">Prof. Yuefan Deng</a></li>
+      <li><strong>Key collaborator:</strong> Prof. Bertal H. Aktas (Brigham and Women’s Hospital; Harvard Medical School)</li>
+      <li><strong>Collaborators / Labmates:</strong> 
+        <a href="https://qujx.github.io/" target="_blank" rel="noopener">Jingxiang Qu</a>, 
+        <a href="https://wenhangao21.github.io/" target="_blank" rel="noopener">Wenhan Gao</a>, 
+        <a href="https://jiuguaiwf.github.io/" target="_blank" rel="noopener">Fang Wan</a>
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- News (auto-imported from news.html) -->
+  <section id="home-news" aria-labelledby="home-news-heading">
+    <h2 id="home-news-heading">News</h2>
+    <ul id="news-list-home">
+      <li>Loading latest news…</li>
+    </ul>
+    <noscript>
+      <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
+    </noscript>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Ruichen Xu · Simple static site inspired by clean academic pages. Hosted via GitHub Pages.</p>
+  </div>
+</footer>
+
+<!-- Auto-import ALL News items from news.html -->
+<script>
+(function () {
+  const DEST_SELECTOR = '#news-list-home';
+
+  function findNewsSection(doc) {
+    // Prefer explicit id if present: <section id="news">
+    let sec = doc.querySelector('#news');
+    if (sec) return sec;
+    // Fallback: first section whose h2 text is "News"
+    for (const s of doc.querySelectorAll('section')) {
+      const h2 = s.querySelector('h2');
+      if (h2 && /news/i.test(h2.textContent.trim())) return s;
+    }
+    return null;
+  }
+
+  fetch('news.html', { cache: 'no-store' })
+    .then(r => r.ok ? r.text() : Promise.reject(new Error('HTTP ' + r.status)))
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const newsSection = findNewsSection(doc);
+      const srcList = newsSection ? newsSection.querySelector('ul') : null;
+      const dest = document.querySelector(DEST_SELECTOR);
+
+      if (!srcList || !dest) throw new Error('News list not found');
+
+      // Replace placeholder
+      dest.innerHTML = '';
+
+      // Clone ALL items (show everything)
+      srcList.querySelectorAll(':scope > li').forEach(li => {
+        dest.appendChild(li.cloneNode(true));
+      });
+    })
+    .catch(err => {
+      console.error('Failed to load news:', err);
+      const dest = document.querySelector(DEST_SELECTOR);
+      if (dest) dest.innerHTML = '<li>Could not load news. See the <a href="news.html">News page</a>.</li>';
+    });
+})();
+</script>
+</body>
+</html>
