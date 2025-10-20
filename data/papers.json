@@ -1,0 +1,62 @@
+[
+  {
+    "title": "KAR‑HNN: Kolmogorov–Arnold Representation for Symplectic Learning",
+    "authors": "Ruichen Xu*, ...",
+    "venue": "IJCNN",
+    "year": "2025 (accepted)",
+    "url": "",
+    "venue_url": "https://ijcnn.org/",
+    "badges": [
+      "Dynamics",
+      "HNN"
+    ]
+  },
+  {
+    "title": "RL‑QESA: Reinforcement‑Learning Quasi‑Equilibrium Simulated Annealing",
+    "authors": "Ruichen Xu*, ...",
+    "venue": "— under review",
+    "year": "2025",
+    "url": "",
+    "venue_url": "https://aistats.org/",
+    "badges": [
+      "Optimization",
+      "RL"
+    ]
+  },
+  {
+    "title": "Adaptive Physics‑Guided Diffusion for PDE Recovery",
+    "authors": "Ruichen Xu*, ...",
+    "venue": "ICASSP",
+    "year": "2026 (submitted)",
+    "url": "",
+    "venue_url": "https://2026.ieeeicassp.org/",
+    "badges": [
+      "Diffusion",
+      "PDE"
+    ]
+  },
+  {
+    "title": "Sparse/Partial‑Obs PDEBench for Operator Learning",
+    "authors": "Ruichen Xu*, ...",
+    "venue": "ICLR Datasets & Benchmarks",
+    "year": "2026 (planned)",
+    "url": "",
+    "venue_url": "https://iclr.cc/Conferences/2026",
+    "badges": [
+      "Benchmark",
+      "Neural Operator"
+    ]
+  },
+  {
+    "title": "Operator Learning for Implied Volatility from Options",
+    "authors": "Ruichen Xu*, ...",
+    "venue": "Journal/Conference TBD",
+    "year": "2025–2026",
+    "url": "",
+    "venue_url": "https://www.springer.com/journal/10479",
+    "badges": [
+      "AI4Finance",
+      "Volatility"
+    ]
+  }
+]

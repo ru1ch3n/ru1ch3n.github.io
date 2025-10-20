@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2025-10-18",
+    "text": "Paper accepted to IJCNN 2025: KAR‑HNN (Kolmogorov–Arnold Representation for Symplectic Learning).",
+    "link_text": "IJCNN homepage",
+    "link": "https://ijcnn.org/",
+    "tag": "Paper"
+  },
+  {
+    "date": "2025-10-12",
+    "text": "Released new results on RL‑guided quasi‑equilibrium simulated annealing.",
+    "link_text": "Method overview (draft)",
+    "link": "",
+    "tag": "Research Update"
+  },
+  {
+    "date": "2025-09-30",
+    "text": "Submitted “Adaptive Physics‑Guided Diffusion for PDE Recovery” to ICASSP 2026.",
+    "link_text": "ICASSP 2026",
+    "link": "https://2026.ieeeicassp.org/",
+    "tag": "Submission"
+  },
+  {
+    "date": "2025-08-07",
+    "text": "Released Sparse/Partial‑Obs PDEBench draft and plan for ICLR D&B 2026.",
+    "link_text": "ICLR",
+    "link": "https://iclr.cc/Conferences/2026",
+    "tag": "Benchmark"
+  }
+]
