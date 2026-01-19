@@ -26,13 +26,21 @@
 </ul>
 </nav>
 </header>
+
 <main class="container">
 <section class="hero" id="hero">
 <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
 <img alt="Portrait of Ruichen Xu" src="assets/profile.jpg" style="width:140px;height:140px;object-fit:cover;border-radius:50%;border:1px solid #e3e3e3;"/>
 <div>
 <h2 style="margin:0 0 6px 0;">Hi! I'm Ruichen Xu</h2>
-<p style="margin:0;">Ph.D. candidate in Computational Applied Mathematics at Stony Brook University. I build reliable scientific-ML systems for PDEs, neural operators, and optimization/sampling.</p>
+
+<p style="margin:0;">
+  Ph.D. candidate in Computational Applied Mathematics at Stony Brook University.
+  I build reliable scientific-ML systems for PDEs, neural operators, and optimization/sampling.
+  My first public open project is
+  <a href="https://ru1ch3n.github.io/PartialObs--PDEBench/" rel="noopener" target="_blank">PartialObs–PDEBench</a>.
+</p>
+
 <p style="margin:6px 0 0 0;"><a href="assets/Ruichen_Xu_CV (1).pdf">CV (PDF)</a></p>
 
 <!-- Quick links (from CV) -->
@@ -49,35 +57,61 @@
 </div>
 </div>
 </section>
+
+<!-- NEW: Open Projects -->
+<section id="open-projects">
+  <h2>Open Projects</h2>
+  <ul>
+    <li>
+      <strong>
+        <a href="https://ru1ch3n.github.io/PartialObs--PDEBench/" rel="noopener" target="_blank">
+          PartialObs–PDEBench
+        </a>
+      </strong>
+      — Benchmarking partial observation settings for PDE learning (Neural Operators, diffusion baselines, and more).
+    </li>
+  </ul>
+</section>
+
 <section id="people">
 <h2>People</h2>
-<ul><li><strong>Advisors:</strong> <a href="https://www.stonybrook.edu/commcms/ams/people/faculty/_faculty_profiles/deng.php" rel="noopener" target="_blank">Prof. Yuefan Deng</a></li>
-<li><strong>Collaborator:</strong> Prof. Bertal H. Aktas (Brigham and Women’s Hospital; Harvard Medical School)</li>
-<li><strong>Peer Collaborators:</strong>
-
-<a href="https://jiuguaiwf.github.io/" rel="noopener" target="_blank">Fang Wan</a>, 
-        <a href="https://gkementzidis.github.io/gkementzidis/" rel="noopener" target="_blank">Georgios (Giorgos) Kementzidis</a>, 
-        <a href="https://qujx.github.io/" rel="noopener" target="_blank">Jingxiang Qu</a>, 
-        <a href="https://wangsiyao.github.io/" rel="noopener" target="_blank">Siyao Wang</a>, 
-        <a href="https://wenhangao21.github.io/" rel="noopener" target="_blank">Wenhan Gao</a>
-</li></ul>
+<ul>
+  <li><strong>Advisors:</strong> <a href="https://www.stonybrook.edu/commcms/ams/people/faculty/_faculty_profiles/deng.php" rel="noopener" target="_blank">Prof. Yuefan Deng</a></li>
+  <li><strong>Collaborator:</strong> Prof. Bertal H. Aktas (Brigham and Women’s Hospital; Harvard Medical School)</li>
+  <li><strong>Peer Collaborators:</strong>
+    <a href="https://jiuguaiwf.github.io/" rel="noopener" target="_blank">Fang Wan</a>, 
+    <a href="https://gkementzidis.github.io/gkementzidis/" rel="noopener" target="_blank">Georgios (Giorgos) Kementzidis</a>, 
+    <a href="https://qujx.github.io/" rel="noopener" target="_blank">Jingxiang Qu</a>, 
+    <a href="https://wangsiyao.github.io/" rel="noopener" target="_blank">Siyao Wang</a>, 
+    <a href="https://wenhangao21.github.io/" rel="noopener" target="_blank">Wenhan Gao</a>
+  </li>
+</ul>
 </section>
+
 <!-- News (auto-imported from news.html) -->
 <section aria-labelledby="home-news-heading" id="home-news">
 <h2 id="home-news-heading">News</h2>
 <ul id="news-list-home">
-<li>Loading latest news…</li>
+  <!-- NEW: your pinned news item (shown even before news.html loads) -->
+  <li>
+    <strong>New:</strong> Released my first public open project,
+    <a href="https://ru1ch3n.github.io/PartialObs--PDEBench/" rel="noopener" target="_blank">PartialObs–PDEBench</a>.
+  </li>
+  <li>Loading latest news…</li>
 </ul>
 <noscript>
 <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
 </noscript>
 </section>
+
 </main>
+
 <footer>
 <div class="container">
 <p>© 2025 Ruichen Xu · Simple static site inspired by clean academic pages. Hosted via GitHub Pages.</p>
 </div>
 </footer>
+
 <!-- Auto-import ALL News items from news.html -->
 <script>
 (function () {
@@ -106,8 +140,10 @@
 
       if (!srcList || !dest) throw new Error('News list not found');
 
-      // Replace placeholder
+      // Keep the first "pinned" item (your PartialObs news), then replace the rest.
+      const pinned = dest.querySelector('li') ? dest.querySelector('li').cloneNode(true) : null;
       dest.innerHTML = '';
+      if (pinned) dest.appendChild(pinned);
 
       // Clone ALL items (show everything)
       srcList.querySelectorAll(':scope > li').forEach(li => {
@@ -117,7 +153,15 @@
     .catch(err => {
       console.error('Failed to load news:', err);
       const dest = document.querySelector(DEST_SELECTOR);
-      if (dest) dest.innerHTML = '<li>Could not load news. See the <a href="news.html">News page</a>.</li>';
+      // Keep pinned item if it exists; then show fallback.
+      const pinned = dest && dest.querySelector('li') ? dest.querySelector('li').cloneNode(true) : null;
+      if (dest) {
+        dest.innerHTML = '';
+        if (pinned) dest.appendChild(pinned);
+        dest.insertAdjacentHTML('beforeend',
+          '<li>Could not load news. See the <a href="news.html">News page</a>.</li>'
+        );
+      }
     });
 })();
 </script>
