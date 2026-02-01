@@ -58,11 +58,10 @@
 </div>
 </section>
 
-<!-- NEW: Open Projects -->
+<!-- Open Projects (PartialObs–PDEBench always stays on top) -->
 <section id="open-projects">
   <h2>Open Projects</h2>
   <ul id="open-projects-list">
-    <!-- Keep this item pinned at the top -->
     <li data-pinned="true">
       <strong>
         <a href="https://ru1ch3n.github.io/PartialObs--PDEBench/" rel="noopener" target="_blank">
@@ -75,7 +74,7 @@
 </section>
 
 <script>
-/* Keep PartialObs–PDEBench always at the top of the Open Projects list */
+/* Keep any item with data-pinned="true" at the top of Open Projects */
 (function pinOpenProjects() {
   const list = document.querySelector('#open-projects-list');
   if (!list) return;
@@ -97,7 +96,7 @@
         </a>
       </strong>
       <div style="margin-top:6px; line-height:1.6;">
-        <em>ICLR 2026 (Accepted)</em><br/>
+        <em>ICLR 2026</em><br/>
         Jingxiang Qu, Wenhan Gao, <strong>Ruichen Xu</strong>, Yi Liu
         &nbsp;|&nbsp;
         <a href="https://openreview.net/pdf?id=Q9gz8lVyAi" rel="noopener" target="_blank">PDF</a>
@@ -128,14 +127,26 @@
 <!-- News (auto-imported from news.html) -->
 <section aria-labelledby="home-news-heading" id="home-news">
 <h2 id="home-news-heading">News</h2>
+
 <ul id="news-list-home">
-  <!-- NEW: your pinned news item (shown even before news.html loads) -->
-  <li>
+  <!-- Pinned items that always stay at the top -->
+  <li data-pinned="true">
     <strong>New:</strong> Released my first public open project,
     <a href="https://ru1ch3n.github.io/PartialObs--PDEBench/" rel="noopener" target="_blank">PartialObs–PDEBench</a>.
   </li>
+
+  <li data-pinned="true">
+    <strong>Jan 2026:</strong> Paper update —
+    <a href="https://openreview.net/forum?id=Q9gz8lVyAi" rel="noopener" target="_blank">
+      IAGA: Identity-Aware Gaussian Approximation for Efficient 3D Molecular Generation
+    </a>.
+    Special thanks to my friend
+    <a href="https://qujx.github.io/" rel="noopener" target="_blank">Jingxiang Qu</a>.
+  </li>
+
   <li>Loading latest news…</li>
 </ul>
+
 <noscript>
 <p class="small">JavaScript is required to load the latest news here. Please visit the <a href="news.html">News page</a>.</p>
 </noscript>
@@ -149,7 +160,7 @@
 </div>
 </footer>
 
-<!-- Auto-import ALL News items from news.html -->
+<!-- Auto-import ALL News items from news.html (while keeping pinned items on top) -->
 <script>
 (function () {
   const DEST_SELECTOR = '#news-list-home';
@@ -177,12 +188,14 @@
 
       if (!srcList || !dest) throw new Error('News list not found');
 
-      // Keep the first "pinned" item (your PartialObs news), then replace the rest.
-      const pinned = dest.querySelector('li') ? dest.querySelector('li').cloneNode(true) : null;
-      dest.innerHTML = '';
-      if (pinned) dest.appendChild(pinned);
+      // Keep ALL pinned items already on the home page
+      const pinned = Array.from(dest.querySelectorAll('li[data-pinned="true"]'))
+        .map(li => li.cloneNode(true));
 
-      // Clone ALL items (show everything)
+      dest.innerHTML = '';
+      pinned.forEach(li => dest.appendChild(li));
+
+      // Append all items from news.html
       srcList.querySelectorAll(':scope > li').forEach(li => {
         dest.appendChild(li.cloneNode(true));
       });
@@ -190,15 +203,18 @@
     .catch(err => {
       console.error('Failed to load news:', err);
       const dest = document.querySelector(DEST_SELECTOR);
-      // Keep pinned item if it exists; then show fallback.
-      const pinned = dest && dest.querySelector('li') ? dest.querySelector('li').cloneNode(true) : null;
-      if (dest) {
-        dest.innerHTML = '';
-        if (pinned) dest.appendChild(pinned);
-        dest.insertAdjacentHTML('beforeend',
-          '<li>Could not load news. See the <a href="news.html">News page</a>.</li>'
-        );
-      }
+      if (!dest) return;
+
+      const pinned = Array.from(dest.querySelectorAll('li[data-pinned="true"]'))
+        .map(li => li.cloneNode(true));
+
+      dest.innerHTML = '';
+      pinned.forEach(li => dest.appendChild(li));
+
+      dest.insertAdjacentHTML(
+        'beforeend',
+        '<li>Could not load news. See the <a href="news.html">News page</a>.</li>'
+      );
     });
 })();
 </script>
