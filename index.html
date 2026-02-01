@@ -61,14 +61,51 @@
 <!-- NEW: Open Projects -->
 <section id="open-projects">
   <h2>Open Projects</h2>
-  <ul>
-    <li>
+  <ul id="open-projects-list">
+    <!-- Keep this item pinned at the top -->
+    <li data-pinned="true">
       <strong>
         <a href="https://ru1ch3n.github.io/PartialObs--PDEBench/" rel="noopener" target="_blank">
           PartialObs–PDEBench
         </a>
       </strong>
       — Benchmarking partial observation settings for PDE learning (Neural Operators, diffusion baselines, and more).
+    </li>
+  </ul>
+</section>
+
+<script>
+/* Keep PartialObs–PDEBench always at the top of the Open Projects list */
+(function pinOpenProjects() {
+  const list = document.querySelector('#open-projects-list');
+  if (!list) return;
+
+  const items = Array.from(list.querySelectorAll(':scope > li'));
+  items.sort((a, b) => (b.dataset.pinned === 'true') - (a.dataset.pinned === 'true'));
+  items.forEach(li => list.appendChild(li));
+})();
+</script>
+
+<!-- NEW: Accepted Papers -->
+<section id="accepted-papers">
+  <h2>Accepted Papers</h2>
+  <ul>
+    <li>
+      <strong>
+        <a href="https://openreview.net/forum?id=Q9gz8lVyAi" rel="noopener" target="_blank">
+          IAGA: Identity-Aware Gaussian Approximation for Efficient 3D Molecular Generation
+        </a>
+      </strong>
+      <div style="margin-top:6px; line-height:1.6;">
+        <em>ICLR 2026 (Accepted)</em><br/>
+        Jingxiang Qu, Wenhan Gao, <strong>Ruichen Xu</strong>, Yi Liu
+        &nbsp;|&nbsp;
+        <a href="https://openreview.net/pdf?id=Q9gz8lVyAi" rel="noopener" target="_blank">PDF</a>
+      </div>
+      <p class="small" style="margin:6px 0 0 0;">
+        Special thanks to my friend
+        <a href="https://qujx.github.io/" rel="noopener" target="_blank">Jingxiang Qu</a>.
+      </p>
     </li>
   </ul>
 </section>
