@@ -236,7 +236,7 @@ main { min-height: 70vh; }
   .nav-list { max-width: calc(100vw - 90px); justify-content: flex-end; overflow-x: auto; scrollbar-width: none; }
   .nav-list::-webkit-scrollbar { display: none; }
   .nav-list a { padding-inline: 9px; white-space: nowrap; }
-  .nav-list li:nth-child(4) { display: none; }
+  .nav-list li:nth-child(5) { display: none; }
   .nav-list .nav-cv { margin-left: 0; }
   .hero { padding-top: 58px; }
   .hero h1 { font-size: clamp(2.65rem, 13vw, 4.15rem); }
