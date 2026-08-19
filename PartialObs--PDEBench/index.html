@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PDE-OBS Benchmark Builder — PartialObs–PDEBench</title>
+  <link rel="stylesheet" href="assets/style.css?v=2026-08-18-builder-first" />
+
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div>
+          <h1>PDE-OBS Benchmark Builder</h1>
+          <p class="subtitle">Design reproducible <b>partial-observation PDE benchmarks</b>, generate the exact run code, and report data quality for every selected equation.</p>
+          <div class="meta">  <div><b>Project:</b> <a class="meta-link" href="https://ru1ch3n.github.io/PartialObs--PDEBench" target="_blank" rel="noopener noreferrer">ru1ch3n.github.io/PartialObs--PDEBench</a></div>  <div><b>Source:</b> private GitHub repository; this public site is a static release mirror.</div></div>
+        </div>
+
+        <div class="hero-card home-builder-card">  <div class="smallcaps">Main contribution</div>  <h2>Build your partial-observation benchmark</h2>  <p class="muted">Choose PDEs, boundaries, physical regimes, observation masks, and quality gates. The Builder returns reproducible dataset YAML and run code.  </p>  <a class="btn primary home-cta" href="builder/">Open Benchmark Builder</a>  <p class="home-secondary-link"><a href="benchmark/">Read the benchmark contract</a></p></div>
+      </div>
+
+      <nav class="nav"><a href="index.html" aria-current="page">Overview</a><a href="progress/">Progress</a><a href="builder/" class="nav-primary">Benchmark Builder</a><a href="benchmark/">Benchmark</a><a href="server/">Run</a><a href="research/">Paper Library</a><a href="pde-problems/">By PDE</a><a href="baselines/">By Method</a><a href="contribute/">Contribute</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+<section id="benchmark-first" class="section home-lead">
+  <div class="smallcaps">Partial observations, controlled</div>
+  <h2>One benchmark workflow from ground truth to quality report</h2>
+  <p>Generate the physical trajectory first, then derive sparse observations as reproducible views. Observation masks never change the underlying ground truth.</p>
+  <div class="benchmark-path" aria-label="Benchmark workflow">
+    <div><span>1</span><b>Choose</b><small>PDE, boundary, setting, regime, scale</small></div>
+    <div><span>2</span><b>Generate</b><small>Deterministic ground-truth trajectories</small></div>
+    <div><span>3</span><b>Observe</b><small>Nine sparse or structured mask views</small></div>
+    <div><span>4</span><b>Validate</b><small>Checksums, provenance, and PDE-specific losses</small></div>
+  </div>
+</section>
+
+<section id="dataset-progress" class="section progress-teaser">
+  <div class="section-heading-row">
+    <div><div class="smallcaps">Full dataset campaign</div><h2>560,000 / 560,000 samples generated</h2></div>
+    <a class="btn" href="progress/">Open full progress report</a>
+  </div>
+  <div class="home-metrics">
+    <div class="card"><strong>3,360</strong><span>complete shards</span></div>
+    <div class="card"><strong>100%</strong><span>generation complete</span></div>
+    <div class="card"><strong>7</strong><span>PDE families</span></div>
+    <div class="card"><strong>0</strong><span>partials or locks</span></div>
+  </div>
+  <div class="note"><b>Validation status:</b> every shard passes the unchanged <code>pde_loss &le; 0.05</code> gate; the final strict aggregate validator is running separately.</div>
+</section>
+
+<section id="benchmark-scope" class="section">
+  <div class="section-heading-row">
+    <div><div class="smallcaps">Frozen design space</div><h2>A benchmark you can inspect before running</h2></div>
+    <a class="btn" href="benchmark/">Full contract</a>
+  </div>
+  <div class="home-metrics">
+    <div class="card"><strong>7</strong><span>PDE families</span></div>
+    <div class="card"><strong>4</strong><span>boundary protocols</span></div>
+    <div class="card"><strong>10</strong><span>condition settings</span></div>
+    <div class="card"><strong>3</strong><span>physical regimes</span></div>
+    <div class="card"><strong>9</strong><span>observation masks</span></div>
+    <div class="card"><strong>7</strong><span>PDE loss reports</span></div>
+  </div>
+  <div class="note"><b>Scientific status:</b> the code and quality-reporting workflow are available. Paper-grade ground truth still requires the documented numerical-validation gate.</div>
+</section>
+
+<section id="library" class="section library-teaser">
+  <div class="smallcaps">Supporting resource</div>
+  <h2>AI4PDE paper library</h2>
+  <p class="muted">The benchmark comes first. The literature library is a supporting index of <b>301</b> AI4PDE/AI4SDE papers, with <b>12</b> detailed pages. Find work by the physical equation or by the learning method.</p>
+  <div class="library-links">
+    <a class="card" href="pde-problems/"><b>Browse by PDE</b><span>Fluids, diffusion, elliptic systems, waves, and more</span></a>
+    <a class="card" href="baselines/"><b>Browse by method</b><span>Neural operators, PINNs, diffusion, graphs, and baselines</span></a>
+    <a class="card" href="research/"><b>Search all papers</b><span>Combine PDE, method, venue, year, and keyword filters</span></a>
+  </div>
+</section>
+
+
+    <footer class="footer">
+      <div class="muted">Generated deterministically from repository sources.</div>
+    </footer>
+  </main>
+</body>
+</html>

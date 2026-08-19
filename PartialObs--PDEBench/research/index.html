@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI4PDE Paper Library — PartialObs–PDEBench</title>
+  <link rel="stylesheet" href="../assets/style.css?v=2026-08-18-builder-first" />
+  <script>window.PAPERS_DB_URL='../assets/papers_db.json';</script><script defer src="../assets/research.js"></script>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-top">
+        <div>
+          <h1>AI4PDE Paper Library</h1>
+          <p class="subtitle">Find papers by PDE, method, venue, or keyword. The library supports the benchmark and lives after the Builder workflow.</p>
+
+        </div>
+
+
+      </div>
+
+      <nav class="nav"><a href="../index.html">Overview</a><a href="../progress/">Progress</a><a href="../builder/" class="nav-primary">Benchmark Builder</a><a href="../benchmark/">Benchmark</a><a href="../server/">Run</a><a href="../research/" aria-current="page">Paper Library</a><a href="../pde-problems/">By PDE</a><a href="../baselines/">By Method</a><a href="../contribute/">Contribute</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+<section class="section">
+  <div class="smallcaps">Supporting resource</div>
+  <h2>Find AI4PDE papers</h2>
+  <p class="muted">
+    Search <b>301</b> papers, starting with the physical PDE or the method family.
+    Curated pages add experiment and baseline notes; index pages are bibliographic placeholders.
+  </p>
+
+  <div class="library-index-links">
+    <a class="card" href="../pde-problems/"><b>Browse the PDE index</b><span>Group papers by equation family</span></a>
+    <a class="card" href="../baselines/"><b>Browse the method index</b><span>Group papers by learning approach</span></a>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <div class="grid">
+      <div>
+        <div class="smallcaps">Search</div>
+        <input id="q" class="input" placeholder="Search title, author, PDE, or method..." />
+      </div>
+
+      <div>
+        <div class="smallcaps">Filters</div>
+        <div class="row">
+          <select id="f_pde" class="select"><option value="">All PDEs</option></select>
+          <select id="f_method" class="select"><option value="">All methods</option></select>
+          <select id="f_venue" class="select"><option value="">All venues</option></select>
+          <select id="f_status" class="select">
+            <option value="">All statuses</option>
+            <option value="curated">curated</option>
+            <option value="index">index</option>
+          </select>
+        </div>
+        <div class="muted" style="margin-top:8px;">
+          Showing <span id="shownCount">0</span> / <span id="totalCount">301</span>
+          (<b>12</b> curated)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <div class="row" style="align-items:center; justify-content:space-between;">
+      <div class="muted">
+        Selected: <b><span id="selCount">0</span></b>
+      </div>
+      <div class="row">
+        <button id="btnCopyBib" class="btn">Copy BibTeX</button>
+        <button id="btnDownloadBib" class="btn primary">Download .bib</button>
+        <button id="btnClearSel" class="btn">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tablewrap" style="margin-top:16px;">
+    <table class="papers">
+      <thead>
+        <tr>
+          <th style="width:60px;">Pick</th>
+          <th style="width:80px;">Year</th>
+          <th>Paper</th>
+          <th style="width:140px;">Venue</th>
+          <th style="width:170px;">Method</th>
+          <th style="width:220px;">PDEs</th>
+          <th style="width:220px;">Tasks</th>
+          <th style="width:90px;">Status</th>
+        </tr>
+      </thead>
+      <tbody id="paperRows"></tbody>
+    </table>
+  </div>
+
+  <div class="note" style="margin-top:16px;">
+    Tip: if you find an index placeholder you care about, click into it and use the <b>Contribute</b> tab to add a curated JSON summary.
+  </div>
+</section>
+
+
+    <footer class="footer">
+      <div class="muted">Generated deterministically from repository sources.</div>
+    </footer>
+  </main>
+</body>
+</html>
