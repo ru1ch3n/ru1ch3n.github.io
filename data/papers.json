@@ -1,62 +1,192 @@
 [
   {
-    "title": "KAR‑HNN: Kolmogorov–Arnold Representation for Symplectic Learning",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "IJCNN",
-    "year": "2025 (accepted)",
-    "url": "",
-    "venue_url": "https://ijcnn.org/",
-    "badges": [
-      "Dynamics",
-      "HNN"
+    "id": "hp-jepa",
+    "title": "HP-JEPA: Hierarchical Partitioning for Multi-Resolution Graph Joint-Embedding Predictive Learning",
+    "authors_html": "<strong>Ruichen Xu</strong>, Jingxiang Qu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Yann LeCun, Yuefan Deng",
+    "venue": "Manuscript",
+    "category": "manuscripts",
+    "year": null,
+    "links": []
+  },
+  {
+    "id": "jeno",
+    "title": "JENO: Full-Field Latent Prediction for Sparse Inverse PDE Inference",
+    "authors_html": "<strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jingxiang Qu, Tian Xie, Jiaxing Zhang, Linsey Pang, Wenhan Gao, Ravid Shwartz-Ziv, Yuefan Deng",
+    "venue": "Manuscript",
+    "category": "manuscripts",
+    "year": null,
+    "links": []
+  },
+  {
+    "id": "iaga",
+    "title": "IAGA: Identity-Aware Gaussian Approximation for Efficient 3D Molecular Generation",
+    "authors_html": "Jingxiang Qu, Wenhan Gao, <strong>Ruichen Xu</strong>, Yi Liu",
+    "venue": "ICLR 2026 · Accepted",
+    "category": "conference",
+    "year": 2026,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=Q9gz8lVyAi"
+      }
     ]
   },
   {
-    "title": "RL‑QESA: Reinforcement‑Learning Quasi‑Equilibrium Simulated Annealing",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "— under review",
-    "year": "2025",
-    "url": "",
-    "venue_url": "https://aistats.org/",
-    "badges": [
-      "Optimization",
-      "RL"
+    "id": "vihn",
+    "title": "Velocity-Inferred Hamiltonian Networks: Symplectic Dynamics from Position-Only Observations",
+    "authors_html": "<strong>Ruichen Xu</strong>, Claire Yu, Zongyu Wu, Siyao Wang, Luoyao Chen, Georgios Kementzidis, Haochun Wang, Yuefan Deng",
+    "venue": "NYSDS 2025 · SIAM Proceedings",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "SIAM DOI",
+        "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.13"
+      }
     ]
   },
   {
-    "title": "Adaptive Physics‑Guided Diffusion for PDE Recovery",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "ICASSP",
-    "year": "2026 (submitted)",
-    "url": "",
-    "venue_url": "https://2026.ieeeicassp.org/",
-    "badges": [
-      "Diffusion",
-      "PDE"
+    "id": "discretization",
+    "title": "Discretization-invariance? On the Discretization Mismatch Errors in Neural Operators",
+    "authors_html": "Wenhan Gao, <strong>Ruichen Xu</strong>, Yuefan Deng, Yi Liu",
+    "venue": "ICLR 2025",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=J9FgrqOOni"
+      },
+      {
+        "label": "Conference page",
+        "url": "https://iclr.cc/virtual/2025/poster/30126"
+      }
     ]
   },
   {
-    "title": "Sparse/Partial‑Obs PDEBench for Operator Learning",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "ICLR Datasets & Benchmarks",
-    "year": "2026 (planned)",
-    "url": "",
-    "venue_url": "https://iclr.cc/Conferences/2026",
-    "badges": [
-      "Benchmark",
-      "Neural Operator"
+    "id": "kar-hnn",
+    "title": "Kolmogorov–Arnold Representation for Symplectic Learning: Advancing Hamiltonian Neural Networks",
+    "authors_html": "Zongyu Wu, <strong>Ruichen Xu</strong><sup>†</sup>, Luoyao Chen, Georgios Kementzidis, Siyao Wang, Yuefan Deng · <sup>†</sup>Co-first author and project lead",
+    "venue": "IJCNN 2025",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "IEEE DOI",
+        "url": "https://doi.org/10.1109/IJCNN64981.2025.11228220"
+      }
     ]
   },
   {
-    "title": "Operator Learning for Implied Volatility from Options",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "Journal/Conference TBD",
-    "year": "2025–2026",
-    "url": "",
-    "venue_url": "https://www.springer.com/journal/10479",
-    "badges": [
-      "AI4Finance",
-      "Volatility"
+    "id": "bimol",
+    "title": "Boundary-Informed Method of Lines for Physics-Informed Neural Networks",
+    "authors_html": "Maximilian Cederholm, Siyao Wang, Haochun Wang, <strong>Ruichen Xu</strong>, Yuefan Deng · Co-corresponding author with Yuefan Deng",
+    "venue": "NYSDS 2025 · SIAM Proceedings",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "SIAM DOI",
+        "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.12"
+      }
+    ]
+  },
+  {
+    "id": "active-learning",
+    "title": "Physics-Informed Active Learning via Functional Simulated Annealing for Neural Operator",
+    "authors_html": "Albert Ding, Siyao Wang, Haochun Wang, <strong>Ruichen Xu</strong>, Yuefan Deng · Co-corresponding author with Yuefan Deng",
+    "venue": "NYSDS 2025 · SIAM Proceedings",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "SIAM DOI",
+        "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.14"
+      }
+    ]
+  },
+  {
+    "id": "apod",
+    "title": "APOD: Adaptive PDE-Observation Diffusion for Physics-Constrained Sampling",
+    "authors_html": "<strong>Ruichen Xu</strong>, Haochun Wang, Georgios Kementzidis, Chenhao Si, Yuefan Deng",
+    "venue": "ICML 2025 Workshop on Assessing World Models · Poster",
+    "category": "workshops",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=Z1J7LJGDxH"
+      }
+    ]
+  },
+  {
+    "id": "rl-qesa",
+    "title": "RL-QESA: Reinforcement-Learning Quasi-Equilibrium Simulated Annealing",
+    "authors_html": "<strong>Ruichen Xu</strong>, Kai Li, Haochun Wang, Georgios Kementzidis, Wei Zhu, Yuefan Deng",
+    "venue": "2nd AI for Math Workshop at ICML 2025 · Poster",
+    "category": "workshops",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=4eAAIIBt3Q"
+      }
+    ]
+  },
+  {
+    "id": "iterative-backmapping",
+    "title": "An Iterative Framework for Generative Backmapping of Coarse-Grained Proteins",
+    "authors_html": "Georgios Kementzidis, Erin Wong, John Nicholson, <strong>Ruichen Xu</strong>, Yuefan Deng",
+    "venue": "ICML 2025 GenBio Workshop · Poster",
+    "category": "workshops",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=i2MWUFJcTc"
+      }
+    ]
+  },
+  {
+    "id": "multistep-backmapping",
+    "title": "Multistep Generative Backmapping of Coarse-Grained Structures",
+    "authors_html": "Georgios Kementzidis, Erin Wong, John Nicholson, <strong>Ruichen Xu</strong>, Yuefan Deng",
+    "venue": "Computer Physics Communications · 327, 110286 · 2026",
+    "category": "journals",
+    "year": 2026,
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1016/j.cpc.2026.110286"
+      }
+    ]
+  },
+  {
+    "id": "dsfno",
+    "title": "Dynamic Schwartz–Fourier Neural Operator for Enhanced Expressive Power",
+    "authors_html": "Wenhan Gao, Jian Luo, <strong>Ruichen Xu</strong>, Yi Liu",
+    "venue": "Transactions on Machine Learning Research · 2025",
+    "category": "journals",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=B0E2yjrNb8"
+      }
+    ]
+  },
+  {
+    "id": "ctfno",
+    "title": "Coordinate Transform Fourier Neural Operators for Symmetries in Physical Modeling",
+    "authors_html": "Wenhan Gao, <strong>Ruichen Xu</strong>, Hong Wang, Yi Liu",
+    "venue": "Transactions on Machine Learning Research · 2024",
+    "category": "journals",
+    "year": 2024,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=pMD7A77k3i"
+      }
     ]
   }
 ]

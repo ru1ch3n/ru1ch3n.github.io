@@ -1,30 +1,57 @@
 [
   {
-    "date": "2025-10-18",
-    "text": "Paper accepted to IJCNN 2025: KAR‑HNN (Kolmogorov–Arnold Representation for Symplectic Learning).",
-    "link_text": "IJCNN homepage",
-    "link": "https://ijcnn.org/",
-    "tag": "Paper"
+    "date": "Summer 2026",
+    "title": "REU Research Mentor at AI3",
+    "html": "Mentored AI4Science research projects at Stony Brook University, from project definition and experiments to reproducible implementation and presentation."
   },
   {
-    "date": "2025-10-12",
-    "text": "Released new results on RL‑guided quasi‑equilibrium simulated annealing.",
-    "link_text": "Method overview (draft)",
-    "link": "",
-    "tag": "Research Update"
+    "date": "June 2026",
+    "title": "Generative backmapping published in CPC",
+    "html": "<a href=\"https://doi.org/10.1016/j.cpc.2026.110286\" target=\"_blank\" rel=\"noopener\"><em>Multistep Generative Backmapping of Coarse-Grained Structures</em></a> appeared in volume 327 of Computer Physics Communications."
   },
   {
-    "date": "2025-09-30",
-    "text": "Submitted “Adaptive Physics‑Guided Diffusion for PDE Recovery” to ICASSP 2026.",
-    "link_text": "ICASSP 2026",
-    "link": "https://2026.ieeeicassp.org/",
-    "tag": "Submission"
+    "date": "January 2026",
+    "title": "IAGA accepted to ICLR 2026",
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=Q9gz8lVyAi\" target=\"_blank\" rel=\"noopener\">identity-aware Gaussian approximation for 3D molecular generation</a> was accepted to ICLR."
   },
   {
-    "date": "2025-08-07",
-    "text": "Released Sparse/Partial‑Obs PDEBench draft and plan for ICLR D&B 2026.",
-    "link_text": "ICLR",
-    "link": "https://iclr.cc/Conferences/2026",
-    "tag": "Benchmark"
+    "date": "Winter 2026",
+    "title": "Instructor for AMS 361",
+    "html": "Designed and delivered lectures and assessments at Stony Brook University."
+  },
+  {
+    "date": "August 2025",
+    "title": "Three papers at NYSDS 2025",
+    "html": "One oral and two poster papers appeared in SIAM Proceedings, covering physics-informed neural networks, Hamiltonian learning, and active learning for neural operators."
+  },
+  {
+    "date": "July 2025",
+    "title": "RL-QESA at AI for Math @ ICML",
+    "html": "<a href=\"https://openreview.net/forum?id=4eAAIIBt3Q\" target=\"_blank\" rel=\"noopener\">Reinforcement-Learning Quasi-Equilibrium Simulated Annealing</a> was presented as a poster."
+  },
+  {
+    "date": "June 2025",
+    "title": "APOD at the ICML Assessing World Models Workshop",
+    "html": "<a href=\"https://openreview.net/forum?id=Z1J7LJGDxH\" target=\"_blank\" rel=\"noopener\">Adaptive PDE-Observation Diffusion for Physics-Constrained Sampling</a> was accepted and presented."
+  },
+  {
+    "date": "June 2025",
+    "title": "Dynamic Schwartz-Fourier Neural Operator in TMLR",
+    "html": "<a href=\"https://openreview.net/forum?id=B0E2yjrNb8\" target=\"_blank\" rel=\"noopener\">Our work on enhanced neural-operator expressivity</a> was published in Transactions on Machine Learning Research."
+  },
+  {
+    "date": "May 2025",
+    "title": "KAR for symplectic learning at IJCNN",
+    "html": "<a href=\"https://doi.org/10.1109/IJCNN64981.2025.11228220\" target=\"_blank\" rel=\"noopener\">Kolmogorov–Arnold Representation for Symplectic Learning</a> was accepted; I served as co-first author and project lead."
+  },
+  {
+    "date": "January 2025",
+    "title": "Neural-operator discretization mismatch at ICLR",
+    "html": "<a href=\"https://openreview.net/forum?id=J9FgrqOOni\" target=\"_blank\" rel=\"noopener\"><em>Discretization-invariance?</em></a> was accepted to ICLR 2025."
+  },
+  {
+    "date": "October 2024",
+    "title": "Coordinate Transform FNO in TMLR",
+    "html": "<a href=\"https://openreview.net/forum?id=pMD7A77k3i\" target=\"_blank\" rel=\"noopener\">Our work on symmetries in physical modeling</a> was published in Transactions on Machine Learning Research."
   }
 ]
