@@ -485,3 +485,5 @@ a {
   .news-window { max-height: 30rem; }
 }
 @media print { .news-window { max-height: none; overflow: visible; } .paper-with-figure { grid-template-columns: 10rem minmax(0, 1fr); } }
+
+.name-pronunciation { font-size: .9rem; line-height: 1.7; margin: .5rem 0 0; color: #4b5563; }

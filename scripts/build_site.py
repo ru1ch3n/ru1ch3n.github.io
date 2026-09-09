@@ -55,6 +55,7 @@ def navigation(current):
 def page(filename, title, description, body, home=False):
     canonical = 'https://ru1ch3n.github.io/' + ('' if home else filename)
     heading = 'Ruichen Xu <span class="name-cn" lang="zh">徐瑞辰</span>' if home else ESC(title)
+    pronunciation = '<p class="name-pronunciation"><span>普通话 · Mandarin (Pinyin): <span lang="zh-Latn-pinyin">Xú Ruìchén</span></span><br><span>粤语 · Cantonese (Jyutping): <span lang="yue-Latn-jyutping">ceoi4 seoi6 san4</span></span></p>' if home else ''
     document_title = 'Ruichen Xu | Stony Brook University' if home else title + ' | Ruichen Xu'
     result = f'''<!doctype html>
 <html lang="en">
@@ -71,7 +72,7 @@ def page(filename, title, description, body, home=False):
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="https://ru1ch3n.github.io/assets/profile.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/academic.css?v=20260909-service">
+  <link rel="stylesheet" href="assets/academic.css?v=20260909-pronunciation">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -82,7 +83,7 @@ def page(filename, title, description, body, home=False):
     <div class="nav-foot">Applied Mathematics<br>Stony Brook University</div>
   </aside>
   <main class="main" id="main" tabindex="-1">
-    <header class="page-title"><h1>{heading}</h1></header>
+    <header class="page-title"><h1>{heading}</h1>{pronunciation}</header>
     {body}
     <footer class="footer"><p>© 2026 Ruichen Xu · Updated {DATE}</p><p>{link('Email', 'mailto:ruichen.xu@stonybrook.edu')} · {link('CV', 'assets/Ruichen_Xu_CV.pdf')}</p></footer>
   </main>
@@ -187,7 +188,7 @@ home = f'''<section class="profile" aria-label="Profile and contact">
 </section>
 <section aria-labelledby="academic-service"><div class="section-top"><h2 id="academic-service">Academic service</h2>{link('Reviewing experience', 'bio.html#service')}</div>
 {recognition()}
-<p><strong>Conference reviewer:</strong> {link('ICLR', 'https://iclr.cc/')} (2026, 2027), {link('ICML', 'https://icml.cc/Conferences/2026')} (2026), {link('NeurIPS', 'https://neurips.cc/Conferences/2026')} (2026), and {link('IJCNN', 'https://www.inns.org/ijcnn-home')} (2025, 2026).</p>
+<p><strong>Conference reviewing &amp; program committees:</strong> {'; '.join(link(r['venue'], r['url']) + ' (' + r['years'] + ')' + (' — ' + ESC(r['note']) if r.get('note') else '') for r in SERVICE['conference_reviewing'])}.</p>
 <p><strong>Journal reviewer:</strong> {link('TMLR', 'https://jmlr.org/tmlr/')} (2026), {link('IEEE TNNLS', 'https://cis.ieee.org/publications/t-neural-networks-and-learning-systems')} (2025), and {link('Neurocomputing', 'https://www.sciencedirect.com/journal/neurocomputing')} (2026).</p>
 <p><strong>Workshop reviewer:</strong> {link('AI for Math @ ICML', 'https://openreview.net/group?id=ICML.cc/2025/Workshop/AI4MATH')} (2025).</p>
 </section>'''

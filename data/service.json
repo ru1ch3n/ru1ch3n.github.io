@@ -6,17 +6,69 @@
     "description": "Recognized by the program chairs for the quality of submitted reviews."
   },
   "conference_reviewing": [
-    {"venue": "ICLR", "years": "2026, 2027", "url": "https://iclr.cc/", "note": "2027 invitation accepted"},
-    {"venue": "ICML", "years": "2026", "url": "https://icml.cc/Conferences/2026", "note": "Gold Reviewer"},
-    {"venue": "NeurIPS", "years": "2026", "url": "https://neurips.cc/Conferences/2026"},
-    {"venue": "IJCNN", "years": "2025, 2026", "url": "https://www.inns.org/ijcnn-home"}
+    {
+      "venue": "ICLR",
+      "years": "2026, 2027",
+      "url": "https://iclr.cc/",
+      "note": "2027 invitation accepted"
+    },
+    {
+      "venue": "ICML",
+      "years": "2026",
+      "url": "https://icml.cc/Conferences/2026",
+      "note": "Gold Reviewer"
+    },
+    {
+      "venue": "NeurIPS",
+      "years": "2026",
+      "url": "https://neurips.cc/Conferences/2026"
+    },
+    {
+      "venue": "KDD — AI4Sciences Track",
+      "years": "2026, 2027",
+      "url": "https://www.kdd.org/",
+      "note": "Reviewer; 2027 Cycle 1"
+    },
+    {
+      "venue": "KDD — Research Track",
+      "years": "2027",
+      "url": "https://www.kdd.org/",
+      "note": "Reviewer; Cycle 1"
+    },
+    {
+      "venue": "AAAI",
+      "years": "2027",
+      "url": "https://aaai.org/conference/aaai/",
+      "note": "Program Committee member"
+    },
+    {
+      "venue": "IJCNN",
+      "years": "2025, 2026",
+      "url": "https://www.inns.org/ijcnn-home"
+    }
   ],
   "journal_reviewing": [
-    {"venue": "Transactions on Machine Learning Research (TMLR)", "years": "2026", "url": "https://jmlr.org/tmlr/"},
-    {"venue": "IEEE Transactions on Neural Networks and Learning Systems (TNNLS)", "years": "2025", "url": "https://cis.ieee.org/publications/t-neural-networks-and-learning-systems"},
-    {"venue": "Neurocomputing", "years": "2026", "url": "https://www.sciencedirect.com/journal/neurocomputing"}
+    {
+      "venue": "Transactions on Machine Learning Research (TMLR)",
+      "years": "2026",
+      "url": "https://jmlr.org/tmlr/"
+    },
+    {
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems (TNNLS)",
+      "years": "2025",
+      "url": "https://cis.ieee.org/publications/t-neural-networks-and-learning-systems"
+    },
+    {
+      "venue": "Neurocomputing",
+      "years": "2026",
+      "url": "https://www.sciencedirect.com/journal/neurocomputing"
+    }
   ],
   "workshop_reviewing": [
-    {"venue": "AI for Math Workshop at ICML", "years": "2025", "url": "https://openreview.net/group?id=ICML.cc/2025/Workshop/AI4MATH"}
+    {
+      "venue": "AI for Math Workshop at ICML",
+      "years": "2025",
+      "url": "https://openreview.net/group?id=ICML.cc/2025/Workshop/AI4MATH"
+    }
   ]
 }
