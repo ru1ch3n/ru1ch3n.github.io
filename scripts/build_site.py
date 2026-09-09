@@ -182,14 +182,14 @@ home = f'''<section class="profile" aria-label="Profile and contact">
 </ul></section>
 <section aria-labelledby="news"><div class="section-top"><h2 id="news">News</h2>{link('All news', 'news.html')}</div>
 <div class="news-window" tabindex="0" role="region" aria-label="Recent news, scroll for older updates">{news_list(NEWS)}</div></section>
+<section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2>{link('All publications', 'papers.html')}</div>
+{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
+</section>
 <section aria-labelledby="academic-service"><div class="section-top"><h2 id="academic-service">Academic service</h2>{link('Reviewing experience', 'bio.html#service')}</div>
 {recognition()}
 <p><strong>Conference reviewer:</strong> {link('ICLR', 'https://iclr.cc/')} (2026, 2027), {link('ICML', 'https://icml.cc/Conferences/2026')} (2026), {link('NeurIPS', 'https://neurips.cc/Conferences/2026')} (2026), and {link('IJCNN', 'https://www.inns.org/ijcnn-home')} (2025, 2026).</p>
 <p><strong>Journal reviewer:</strong> {link('TMLR', 'https://jmlr.org/tmlr/')} (2026), {link('IEEE TNNLS', 'https://cis.ieee.org/publications/t-neural-networks-and-learning-systems')} (2025), and {link('Neurocomputing', 'https://www.sciencedirect.com/journal/neurocomputing')} (2026).</p>
 <p><strong>Workshop reviewer:</strong> {link('AI for Math @ ICML', 'https://openreview.net/group?id=ICML.cc/2025/Workshop/AI4MATH')} (2025).</p>
-</section>
-<section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2>{link('All publications', 'papers.html')}</div>
-{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
 </section>'''
 page('index.html', 'Home', 'Ruichen Xu (Bill Xu), Ph.D. candidate at Stony Brook University. Research in scientific machine learning, neural operators, generative models, and optimization.', home, home=True)
 
