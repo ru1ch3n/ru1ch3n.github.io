@@ -213,23 +213,19 @@ sup {
 .section-top a {
   font-size:.9375rem}
 
-.news-list {
-  list-style:none;
-  margin:0;
-  padding:0}
-.news-list li {
-  display:grid;
-  grid-template-columns:7.1rem minmax(0,1fr);
-  gap:.75rem;
-  margin:0 0 .55rem;
-  padding:0}
-.news-list time {
-  color:var(--muted);
-  font-size:.9375rem;
-  font-variant-numeric:tabular-nums}
-.news-list p {
-  margin:0}
-
+.news-window { max-height: 30rem; overflow-y: auto; padding-right: .55rem; scrollbar-width: thin; }
+.news-window:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+.news-list { list-style: disc; margin: .25rem 0; padding-left: 1.1rem; }
+.news-list li { display: list-item; padding: 0; margin: 0 0 .65rem; }
+.news-list p { margin: 0; line-height: 1.5; }
+.news-list p::after { content: ''; display: block; clear: both; }
+.news-prefix { float: left; white-space: nowrap; margin-right: .6rem; }
+.news-date { margin-right: .35rem; font-variant-numeric: tabular-nums; color: #30343a; }
+.news-text { display: block; overflow: hidden; }
+.news-tag { display: inline-block; padding: 1px 8px; border-radius: 999px; border: 1px solid transparent; font-size: .875rem; line-height: 1.5; font-weight: 700; vertical-align: 1px; }
+.tag-paper { background: #ece8ff; color: #4a2aa6; border-color: #d8d1ff; }
+.tag-teaching { background: #e8f0fe; color: #1a4fb3; border-color: #cfe0ff; }
+.tag-group { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
 .paper-list {
   list-style:none;
   padding:0;
@@ -428,11 +424,6 @@ h1 {
   font-size:.9375rem}
 .profile-links li+li::before {
   padding:0 .4rem}
-.news-list li {
-  grid-template-columns:6rem minmax(0,1fr);
-  gap:.5rem}
-.news-list time {
-  font-size:.875rem}
 .record-list li {
   grid-template-columns:1fr;
   gap:.3rem}
@@ -470,3 +461,23 @@ a {
   color:#222}
 }
 
+
+/* Each publication pairs its original paper figure with its bibliographic record. */
+.paper-with-figure { display: grid; grid-template-columns: 13.5rem minmax(0, 1fr); gap: 1.35rem; align-items: center; padding: 1.05rem 0; }
+.paper-copy { min-width: 0; }
+.paper-figure { margin: 0; }
+.paper-figure a { display: flex; align-items: center; justify-content: center; min-height: 7rem; }
+.paper-figure img { width: 100%; max-height: 11rem; object-fit: contain; }
+.paper-figure figcaption { margin-top: .25rem; text-align: center; color: var(--muted); font-size: .8125rem; }
+@media (max-width: 52rem) { .paper-with-figure { grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem; } }
+@media (max-width: 40rem) {
+  .paper-with-figure { grid-template-columns: 1fr; gap: .6rem; }
+  .paper-figure { width: min(100%, 22rem); }
+  .paper-figure a { min-height: 0; }
+  .paper-figure img { max-height: 14rem; }
+  .news-list li { display: list-item; }
+  .news-prefix { float: none; display: block; margin-bottom: .15rem; }
+  .news-text { overflow: visible; }
+  .news-window { max-height: 30rem; }
+}
+@media print { .news-window { max-height: none; overflow: visible; } .paper-with-figure { grid-template-columns: 10rem minmax(0, 1fr); } }

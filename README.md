@@ -16,6 +16,8 @@ The September 2026 redesign takes its layout cues from [Chenyu You’s academic 
 - `assets/Ruichen_Xu_CV.pdf` — current curriculum vitae
 - `data/papers.json` — the 14 publication and manuscript records migrated from the existing site
 - `data/news.json` — news records migrated from the existing site
+- `assets/papers/` — one source figure for every publication and manuscript
+- `data/figure-sources.json` — figure numbers, source versions, and provenance
 - `scripts/build_site.py` — shared navigation, page copy, and static HTML renderer
 
 ## Editing
@@ -25,6 +27,10 @@ Edit publication and news records in `data/`. Edit other page copy and shared na
 ```bash
 python scripts/build_site.py
 ```
+
+Each paper’s `figure` record contains its local image path, dimensions, descriptive alt text, and display label. Figures appear beside the citation and open at full size. The active-learning visual is explicitly labeled as an author-poster overview; the other images come from the papers or their author manuscripts. Preserve this distinction when replacing an image. GAGA is listed under its published title, while the original `iaga` anchor remains stable.
+
+News uses bracketed year-month dates, colored category labels, and aligned announcement text following the reference homepage. The home page’s news list scrolls within a 480-pixel window; the news archive shows the full timeline.
 
 Commit the generated root HTML along with the source changes. GitHub Pages continues to serve the root files directly; no framework, JavaScript runtime, or CI build is needed. All primary content and navigation work with JavaScript disabled.
 

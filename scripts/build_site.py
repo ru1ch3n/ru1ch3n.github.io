@@ -70,7 +70,7 @@ def page(filename, title, description, body, home=False):
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="https://ru1ch3n.github.io/assets/profile.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/academic.css?v=20260909">
+  <link rel="stylesheet" href="assets/academic.css?v=20260909-figures">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -98,11 +98,24 @@ def paper_item(p, selected=False):
     # Keep unpublished manuscripts separate without announcing unverified venues.
     venue = 'Manuscript' if p['category'] == 'manuscripts' else p['venue'].replace(' · Accepted', '')
     identifier = 'selected-' + p['id'] if selected else p['id']
-    return f'''<li class="paper" id="{identifier}">
+    figure = p.get('figure')
+    figure_html = ''
+    if figure:
+        image_path = ESC(figure['path'], quote=True)
+        figure_html = f'''<figure class="paper-figure">
+          <a href="{image_path}" target="_blank" rel="noopener" aria-label="View {ESC(figure['label'], quote=True)} from {ESC(p['title'], quote=True)} at full size">
+            <img src="{image_path}" alt="{ESC(figure['alt'], quote=True)}" width="{figure['width']}" height="{figure['height']}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>{ESC(figure['label'])}</figcaption>
+        </figure>'''
+    return f'''<li class="paper{' paper-with-figure' if figure else ''}" id="{identifier}">
+      {figure_html}
+      <div class="paper-copy">
       <h3 class="paper-title">{title}</h3>
       <p class="authors">{p['authors_html']}</p>
       <p class="venue"><strong>{ESC(venue)}</strong></p>
       {f'<div class="paper-links">{links_html}</div>' if links_html else ''}
+      </div>
     </li>'''
 
 
@@ -110,20 +123,14 @@ def paper_list(items, selected=False):
     return '<ol class="paper-list">' + '\n'.join(paper_item(p, selected) for p in items) + '</ol>'
 
 
-def news_list(items, compact=False):
+def news_list(items):
     rows = []
     for n in items:
-        body = n['html']
-        if compact:
-            body = {
-                'Summer 2026': 'Mentored AI4Science projects in the AI3 REU program at Stony Brook University.',
-                'June 2026': 'Our paper on <a href="https://doi.org/10.1016/j.cpc.2026.110286">generative backmapping</a> appeared in <strong>Computer Physics Communications</strong>.',
-                'January 2026': '<a href="https://openreview.net/forum?id=Q9gz8lVyAi">IAGA</a> was accepted to <strong>ICLR 2026</strong>.',
-                'Winter 2026': 'Taught <strong>AMS 361</strong> at Stony Brook University.',
-            }.get(n['date'], body)
-        else:
-            body = f'<strong>{n["title"]}.</strong> ' + body
-        rows.append(f'<li><time>{ESC(n["date"])}</time><p>{body}</p></li>')
+        rows.append(f'''<li><p>
+          <span class="news-prefix"><span class="news-date">[{ESC(n['display_date'])}]</span>
+          <span class="news-tag tag-{ESC(n['tag'].lower())}">{ESC(n['tag'])}</span></span>
+          <span class="news-text">{n['html']}</span>
+        </p></li>''')
     return '<ul class="news-list">' + '\n'.join(rows) + '</ul>'
 
 
@@ -159,7 +166,7 @@ home = f'''<section class="profile" aria-label="Profile and contact">
   <span class="related">{link('APOD', 'research.html#generative')} · {link('RL-QESA', 'papers.html#rl-qesa')} · {link('Molecular optimization', 'research.html#molecules')}</span></li>
 </ul></section>
 <section aria-labelledby="news"><div class="section-top"><h2 id="news">News</h2>{link('All news', 'news.html')}</div>
-{news_list(NEWS[:4], compact=True)}</section>
+<div class="news-window" tabindex="0" role="region" aria-label="Recent news, scroll for older updates">{news_list(NEWS)}</div></section>
 <section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2>{link('All publications', 'papers.html')}</div>
 {paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
 </section>'''
@@ -198,7 +205,7 @@ research = jump_links([('Partial observations', 'partialobs'), ('Representations
 <h3>ORACLE: LLM-guided molecular optimization</h3>
 <p>LLM-proposed molecular edits are combined with simulated annealing for multi-objective structure-based drug design. Evaluation considers docking, QED, synthetic accessibility, diversity, and Pareto trade-offs.</p>
 <p class="project-meta">2025–present · LLMs · Simulated annealing · Molecular design</p>
-<p class="small">Related work: <a href="papers.html#iaga">IAGA: 3D molecular generation</a> · <a href="papers.html#multistep-backmapping">Generative backmapping of coarse-grained structures</a></p>
+<p class="small">Related work: <a href="papers.html#iaga">GAGA: 3D molecular generation</a> · <a href="papers.html#multistep-backmapping">Generative backmapping of coarse-grained structures</a></p>
 </section>
 <section aria-labelledby="publications"><h2 id="publications">Publications</h2><p>See the <a href="papers.html">complete publication list</a> for conference, journal, and workshop papers, followed by manuscripts.</p></section>
 '''

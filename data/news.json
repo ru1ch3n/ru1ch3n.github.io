@@ -2,56 +2,78 @@
   {
     "date": "Summer 2026",
     "title": "REU Research Mentor at AI3",
-    "html": "Mentored AI4Science research projects at Stony Brook University, from project definition and experiments to reproducible implementation and presentation."
+    "html": "Mentored AI4Science projects in the <strong>AI3 REU program</strong> at Stony Brook University.",
+    "display_date": "2026.06–07",
+    "tag": "GROUP"
   },
   {
     "date": "June 2026",
     "title": "Generative backmapping published in CPC",
-    "html": "<a href=\"https://doi.org/10.1016/j.cpc.2026.110286\" target=\"_blank\" rel=\"noopener\"><em>Multistep Generative Backmapping of Coarse-Grained Structures</em></a> appeared in volume 327 of Computer Physics Communications."
+    "html": "Our paper on <a href=\"https://doi.org/10.1016/j.cpc.2026.110286\">generative backmapping</a> appeared in <strong>Computer Physics Communications</strong>.",
+    "display_date": "2026.06",
+    "tag": "PAPER"
   },
   {
     "date": "January 2026",
     "title": "IAGA accepted to ICLR 2026",
-    "html": "Our work on <a href=\"https://openreview.net/forum?id=Q9gz8lVyAi\" target=\"_blank\" rel=\"noopener\">identity-aware Gaussian approximation for 3D molecular generation</a> was accepted to ICLR."
+    "html": "One paper on <a href=\"https://openreview.net/forum?id=Q9gz8lVyAi\">3D molecular generation</a> accepted to <strong>ICLR 2026</strong>.",
+    "display_date": "2026.01",
+    "tag": "PAPER"
   },
   {
     "date": "Winter 2026",
     "title": "Instructor for AMS 361",
-    "html": "Designed and delivered lectures and assessments at Stony Brook University."
+    "html": "Taught <a href=\"teaching.html#instructor\">AMS 361: Applied Calculus IV</a> at Stony Brook University.",
+    "display_date": "2026.01",
+    "tag": "TEACHING"
   },
   {
     "date": "August 2025",
     "title": "Three papers at NYSDS 2025",
-    "html": "One oral and two poster papers appeared in SIAM Proceedings, covering physics-informed neural networks, Hamiltonian learning, and active learning for neural operators."
+    "html": "Three papers at <strong>NYSDS 2025</strong> (one oral and two posters), published in SIAM Proceedings: <a href=\"papers.html#vihn\">Hamiltonian learning</a>, <a href=\"papers.html#bimol\">physics-informed neural networks</a>, and <a href=\"papers.html#active-learning\">active learning</a>.",
+    "display_date": "2025.08",
+    "tag": "PAPER"
   },
   {
     "date": "July 2025",
     "title": "RL-QESA at AI for Math @ ICML",
-    "html": "<a href=\"https://openreview.net/forum?id=4eAAIIBt3Q\" target=\"_blank\" rel=\"noopener\">Reinforcement-Learning Quasi-Equilibrium Simulated Annealing</a> was presented as a poster."
+    "html": "<a href=\"https://openreview.net/forum?id=4eAAIIBt3Q\">RL-QESA</a> presented as a poster at <strong>AI for Math @ ICML 2025</strong>.",
+    "display_date": "2025.07",
+    "tag": "PAPER"
   },
   {
     "date": "June 2025",
     "title": "APOD at the ICML Assessing World Models Workshop",
-    "html": "<a href=\"https://openreview.net/forum?id=Z1J7LJGDxH\" target=\"_blank\" rel=\"noopener\">Adaptive PDE-Observation Diffusion for Physics-Constrained Sampling</a> was accepted and presented."
+    "html": "<a href=\"https://openreview.net/forum?id=Z1J7LJGDxH\">APOD</a> accepted to the <strong>Assessing World Models Workshop @ ICML 2025</strong>.",
+    "display_date": "2025.06",
+    "tag": "PAPER"
   },
   {
     "date": "June 2025",
     "title": "Dynamic Schwartz-Fourier Neural Operator in TMLR",
-    "html": "<a href=\"https://openreview.net/forum?id=B0E2yjrNb8\" target=\"_blank\" rel=\"noopener\">Our work on enhanced neural-operator expressivity</a> was published in Transactions on Machine Learning Research."
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=B0E2yjrNb8\">Dynamic Schwartz–Fourier Neural Operators</a> published in <strong>TMLR</strong>.",
+    "display_date": "2025.06",
+    "tag": "PAPER"
   },
   {
     "date": "May 2025",
     "title": "KAR for symplectic learning at IJCNN",
-    "html": "<a href=\"https://doi.org/10.1109/IJCNN64981.2025.11228220\" target=\"_blank\" rel=\"noopener\">Kolmogorov–Arnold Representation for Symplectic Learning</a> was accepted; I served as co-first author and project lead."
+    "html": "<a href=\"https://doi.org/10.1109/IJCNN64981.2025.11228220\">Kolmogorov–Arnold Representation for Symplectic Learning</a> accepted to <strong>IJCNN 2025</strong>. Co-first author and project lead.",
+    "display_date": "2025.05",
+    "tag": "PAPER"
   },
   {
     "date": "January 2025",
     "title": "Neural-operator discretization mismatch at ICLR",
-    "html": "<a href=\"https://openreview.net/forum?id=J9FgrqOOni\" target=\"_blank\" rel=\"noopener\"><em>Discretization-invariance?</em></a> was accepted to ICLR 2025."
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=J9FgrqOOni\">discretization mismatch in neural operators</a> accepted to <strong>ICLR 2025</strong>.",
+    "display_date": "2025.01",
+    "tag": "PAPER"
   },
   {
     "date": "October 2024",
     "title": "Coordinate Transform FNO in TMLR",
-    "html": "<a href=\"https://openreview.net/forum?id=pMD7A77k3i\" target=\"_blank\" rel=\"noopener\">Our work on symmetries in physical modeling</a> was published in Transactions on Machine Learning Research."
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=pMD7A77k3i\">Coordinate Transform Fourier Neural Operators</a> published in <strong>TMLR</strong>.",
+    "display_date": "2024.10",
+    "tag": "PAPER"
   }
 ]

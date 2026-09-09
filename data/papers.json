@@ -6,7 +6,14 @@
     "venue": "Manuscript",
     "category": "manuscripts",
     "year": null,
-    "links": []
+    "links": [],
+    "figure": {
+      "path": "assets/papers/hp-jepa.png",
+      "width": 1533,
+      "height": 657,
+      "label": "Figure 1",
+      "alt": "HP-JEPA motivation and overview: multi-resolution graph structure, limitations of fixed partitions, and adaptive resolution weighting."
+    }
   },
   {
     "id": "jeno",
@@ -15,11 +22,18 @@
     "venue": "Manuscript",
     "category": "manuscripts",
     "year": null,
-    "links": []
+    "links": [],
+    "figure": {
+      "path": "assets/papers/jeno.png",
+      "width": 1080,
+      "height": 591,
+      "label": "Figure 1",
+      "alt": "Student–teacher architecture for JENO, with sparse observations, latent targets, and dense recovery."
+    }
   },
   {
     "id": "iaga",
-    "title": "IAGA: Identity-Aware Gaussian Approximation for Efficient 3D Molecular Generation",
+    "title": "GAGA: Gaussianity-Aware Gaussian Approximation for Efficient 3D Molecular Generation",
     "authors_html": "Jingxiang Qu, Wenhan Gao, <strong>Ruichen Xu</strong>, Yi Liu",
     "venue": "ICLR 2026 · Accepted",
     "category": "conference",
@@ -29,7 +43,14 @@
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=Q9gz8lVyAi"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/iaga.png",
+      "width": 1588,
+      "height": 572,
+      "label": "Figure 1",
+      "alt": "GAGA overview showing forward noising and a Gaussian approximation that shortens the reverse generative trajectory."
+    }
   },
   {
     "id": "vihn",
@@ -43,7 +64,14 @@
         "label": "SIAM DOI",
         "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.13"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/vihn.png",
+      "width": 1988,
+      "height": 1048,
+      "label": "Figure 3.2",
+      "alt": "Trajectory, error, invariant, and energy comparisons for baseline and Hamiltonian neural networks on spring-mass, pendulum, two-body, and three-body systems."
+    }
   },
   {
     "id": "discretization",
@@ -61,7 +89,14 @@
         "label": "Conference page",
         "url": "https://iclr.cc/virtual/2025/poster/30126"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/discretization.png",
+      "width": 1584,
+      "height": 496,
+      "label": "Figure 2",
+      "alt": "CROP pipeline maps an input through lifting, a neural operator on band-limited latent features, and projection to an output at any discretization."
+    }
   },
   {
     "id": "kar-hnn",
@@ -75,7 +110,14 @@
         "label": "IEEE DOI",
         "url": "https://doi.org/10.1109/IJCNN64981.2025.11228220"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/kar-hnn.png",
+      "width": 1980,
+      "height": 676,
+      "label": "Figure 1",
+      "alt": "Kolmogorov–Arnold and multilayer-perceptron Hamiltonian neural network architectures, with energy derivatives feeding a shared training loss."
+    }
   },
   {
     "id": "bimol",
@@ -89,7 +131,14 @@
         "label": "SIAM DOI",
         "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.12"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/bimol.png",
+      "width": 1892,
+      "height": 392,
+      "label": "Figure 2.1",
+      "alt": "Standard PINN and boundary-informed MOL-PINN architectures, showing spatial discretization and a temporal network trained on residual and boundary losses."
+    }
   },
   {
     "id": "active-learning",
@@ -103,7 +152,14 @@
         "label": "SIAM DOI",
         "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.14"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/active-learning.png",
+      "width": 3504,
+      "height": 876,
+      "label": "Method overview · author poster",
+      "alt": "PIAL workflow combining low-resolution data and high-resolution instances, physics-informed training losses, and simulated-annealing selection of new training examples."
+    }
   },
   {
     "id": "apod",
@@ -117,7 +173,14 @@
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=Z1J7LJGDxH"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/apod.png",
+      "width": 1789,
+      "height": 535,
+      "label": "Figure 2",
+      "alt": "APOD framework turns noisy initial distributions into samples through diffusion steps guided by observation and PDE terms."
+    }
   },
   {
     "id": "rl-qesa",
@@ -131,7 +194,14 @@
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=4eAAIIBt3Q"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/rl-qesa.png",
+      "width": 1093,
+      "height": 562,
+      "label": "Figure 2",
+      "alt": "RL-QESA transformer cooling policy takes past state, action and reward summaries to emit the next cooling action."
+    }
   },
   {
     "id": "iterative-backmapping",
@@ -145,7 +215,14 @@
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=i2MWUFJcTc"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/iterative-backmapping.png",
+      "width": 1280,
+      "height": 194,
+      "label": "Figure 1",
+      "alt": "Iterative protein backmapping restores atomistic structure from ultra-coarse beads using successive prior networks and decoders."
+    }
   },
   {
     "id": "multistep-backmapping",
@@ -159,7 +236,14 @@
         "label": "DOI",
         "url": "https://doi.org/10.1016/j.cpc.2026.110286"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/multistep-backmapping.png",
+      "width": 2914,
+      "height": 667,
+      "label": "Figure 3",
+      "alt": "Multistep protein backmapping pipeline, from coarse beads through intermediate structures to atomistic detail using successive generative networks."
+    }
   },
   {
     "id": "dsfno",
@@ -173,7 +257,14 @@
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=B0E2yjrNb8"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/dsfno.png",
+      "width": 1868,
+      "height": 476,
+      "label": "Figure 2",
+      "alt": "A Fourier layer uses a neural kernel generator to create a convolution kernel from input frequencies before inverse transform, bias and activation."
+    }
   },
   {
     "id": "ctfno",
@@ -187,6 +278,13 @@
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=pMD7A77k3i"
       }
-    ]
+    ],
+    "figure": {
+      "path": "assets/papers/ctfno.png",
+      "width": 1702,
+      "height": 447,
+      "label": "Figure 1",
+      "alt": "CT-FNO transforms circular data to polar coordinates, applies FNO layers, and transforms solutions back while converting rotation to translation symmetry."
+    }
   }
 ]
