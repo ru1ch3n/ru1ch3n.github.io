@@ -110,10 +110,9 @@ def paper_item(p, selected=False):
     if figure:
         image_path = ESC(figure['path'], quote=True)
         figure_html = f'''<figure class="paper-figure">
-          <a href="{image_path}" target="_blank" rel="noopener" aria-label="View {ESC(figure['label'], quote=True)} from {ESC(p['title'], quote=True)} at full size">
+          <a href="{image_path}" target="_blank" rel="noopener" aria-label="View illustration from {ESC(p['title'], quote=True)} at full size">
             <img src="{image_path}" alt="{ESC(figure['alt'], quote=True)}" width="{figure['width']}" height="{figure['height']}" loading="lazy" decoding="async">
           </a>
-          <figcaption>{ESC(figure['label'])}</figcaption>
         </figure>'''
     return f'''<li class="paper{' paper-with-figure' if figure else ''}" id="{identifier}">
       {figure_html}
@@ -121,6 +120,8 @@ def paper_item(p, selected=False):
       <h3 class="paper-title">{title}</h3>
       <p class="authors">{p['authors_html']}</p>
       <p class="venue"><strong>{ESC(venue)}</strong></p>
+      <p class="paper-summary">{ESC(p["summary"])}</p>
+      {'<p class="small subtle">Illustration from the author poster.</p>' if p["id"] == "active-learning" else ""}
       {f'<p class="small subtle">{ESC(p["note"])}</p>' if p.get('note') else ''}
       {f'<div class="paper-links">{links_html}</div>' if links_html else ''}
       </div>
