@@ -1,30 +1,187 @@
 [
   {
-    "date": "2025-10-18",
-    "text": "Paper accepted to IJCNN 2025: KAR‑HNN (Kolmogorov–Arnold Representation for Symplectic Learning).",
-    "link_text": "IJCNN homepage",
-    "link": "https://ijcnn.org/",
-    "tag": "Paper"
+    "date": "August 2026",
+    "display_date": "2026.08",
+    "sort_date": "2026-08-28",
+    "tag": "SERVICE",
+    "title": "ICLR 2027 reviewer invitation accepted",
+    "html": "Accepted the invitation to serve as a reviewer for <a href=\"https://iclr.cc/Conferences/2027/ReviewerGuidelines\"><strong>ICLR 2027</strong></a>."
   },
   {
-    "date": "2025-10-12",
-    "text": "Released new results on RL‑guided quasi‑equilibrium simulated annealing.",
-    "link_text": "Method overview (draft)",
-    "link": "",
-    "tag": "Research Update"
+    "date": "August 2026",
+    "display_date": "2026.08",
+    "sort_date": "2026-08-03",
+    "tag": "PAPER",
+    "title": "HP-JEPA available on arXiv",
+    "html": "<a href=\"https://arxiv.org/abs/2608.00491\"><strong>HP-JEPA</strong></a>, our work on multi-resolution graph predictive learning, is available on arXiv. <a href=\"https://arxiv.org/pdf/2608.00491\">[PDF]</a>",
+    "paper_ids": [
+      "hp-jepa"
+    ]
   },
   {
-    "date": "2025-09-30",
-    "text": "Submitted “Adaptive Physics‑Guided Diffusion for PDE Recovery” to ICASSP 2026.",
-    "link_text": "ICASSP 2026",
-    "link": "https://2026.ieeeicassp.org/",
-    "tag": "Submission"
+    "date": "June 2026",
+    "display_date": "2026.06",
+    "sort_date": "2026-06-30",
+    "tag": "SERVICE",
+    "title": "TMLR reviewer",
+    "html": "Serving as a reviewer for <a href=\"https://jmlr.org/tmlr/\"><strong>Transactions on Machine Learning Research (TMLR)</strong></a>."
   },
   {
-    "date": "2025-08-07",
-    "text": "Released Sparse/Partial‑Obs PDEBench draft and plan for ICLR D&B 2026.",
-    "link_text": "ICLR",
-    "link": "https://iclr.cc/Conferences/2026",
-    "tag": "Benchmark"
+    "date": "Summer 2026",
+    "title": "REU Research Mentor at AI3",
+    "html": "Mentored AI4Science projects in the <strong>AI3 REU program</strong> at Stony Brook University.",
+    "display_date": "2026.06–07",
+    "tag": "GROUP"
+  },
+  {
+    "date": "June 2026",
+    "title": "Generative backmapping published in CPC",
+    "html": "Our paper on <a href=\"https://doi.org/10.1016/j.cpc.2026.110286\">generative backmapping</a> appeared in <strong>Computer Physics Communications</strong>.",
+    "display_date": "2026.06",
+    "tag": "PAPER",
+    "paper_ids": [
+      "multistep-backmapping"
+    ]
+  },
+  {
+    "date": "May 2026",
+    "display_date": "2026.05",
+    "sort_date": "2026-05-17",
+    "tag": "PAPER",
+    "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting — arXiv preprint",
+    "html": "Our preprint on <a href=\"https://arxiv.org/abs/2605.17250\">test-time adaptation for time-series forecasting</a> is available on arXiv. <a href=\"https://arxiv.org/pdf/2605.17250\">[PDF]</a>",
+    "paper_ids": [
+      "tta-forecasting"
+    ]
+  },
+  {
+    "date": "May 2026",
+    "display_date": "2026.05",
+    "sort_date": "2026-05-13",
+    "tag": "AWARD",
+    "title": "ICML 2026 Gold Reviewer",
+    "html": "Recognized as a <a href=\"https://icml.cc/Conferences/2026\"><strong>Gold Reviewer at ICML 2026</strong></a> for the quality of submitted reviews."
+  },
+  {
+    "date": "January 2026",
+    "title": "GAGA accepted to ICLR 2026",
+    "html": "One paper on <a href=\"https://openreview.net/forum?id=Q9gz8lVyAi\">3D molecular generation</a> accepted to <strong>ICLR 2026</strong>. <a href=\"https://arxiv.org/abs/2507.09043\">[arXiv]</a>",
+    "display_date": "2026.01",
+    "tag": "PAPER",
+    "paper_ids": [
+      "iaga"
+    ]
+  },
+  {
+    "date": "Winter 2026",
+    "title": "Instructor for AMS 361",
+    "html": "Taught <a href=\"teaching.html#instructor\">AMS 361: Applied Calculus IV</a> at Stony Brook University.",
+    "display_date": "2026.01",
+    "tag": "TEACHING"
+  },
+  {
+    "date": "October 2025",
+    "display_date": "2025.10",
+    "sort_date": "2025-10-03",
+    "tag": "PAPER",
+    "title": "Can Data-Driven Dynamics Reveal Hidden Physics? There Is A Need for Interpretable Neural Operators — arXiv preprint",
+    "html": "Our preprint on <a href=\"https://arxiv.org/abs/2510.02683\">interpretable neural operators and hidden physical dynamics</a> is available on arXiv. <a href=\"https://arxiv.org/pdf/2510.02683\">[PDF]</a>",
+    "paper_ids": [
+      "interpretable-no"
+    ]
+  },
+  {
+    "date": "August 2025",
+    "title": "Three papers at NYSDS 2025",
+    "html": "Three papers accepted to <strong>NYSDS 2025</strong> (one oral and two posters): <a href=\"https://epubs.siam.org/doi/10.1137/1.9781611978933.13\">Hamiltonian learning</a>, <a href=\"https://epubs.siam.org/doi/10.1137/1.9781611978933.12\">physics-informed neural networks</a>, and <a href=\"https://epubs.siam.org/doi/10.1137/1.9781611978933.14\">active learning</a>. <a href=\"https://arxiv.org/abs/2510.15852\">[arXiv]</a>",
+    "display_date": "2025.08",
+    "tag": "PAPER",
+    "paper_ids": [
+      "vihn",
+      "bimol",
+      "active-learning"
+    ]
+  },
+  {
+    "date": "July 2025",
+    "title": "RL-QESA at AI for Math @ ICML",
+    "html": "<a href=\"https://openreview.net/forum?id=4eAAIIBt3Q\">RL-QESA</a> presented as a poster at <strong>AI for Math @ ICML 2025</strong>.",
+    "display_date": "2025.07",
+    "tag": "PAPER",
+    "paper_ids": [
+      "rl-qesa"
+    ]
+  },
+  {
+    "date": "June 2025",
+    "title": "APOD at the ICML Assessing World Models Workshop",
+    "html": "<a href=\"https://openreview.net/forum?id=Z1J7LJGDxH\">APOD</a> accepted to the <strong>Assessing World Models Workshop @ ICML 2025</strong>.",
+    "display_date": "2025.06",
+    "tag": "PAPER",
+    "paper_ids": [
+      "apod"
+    ]
+  },
+  {
+    "date": "June 2025",
+    "title": "Dynamic Schwartz-Fourier Neural Operator in TMLR",
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=B0E2yjrNb8\">Dynamic Schwartz–Fourier Neural Operators</a> published in <strong>TMLR</strong>.",
+    "display_date": "2025.06",
+    "tag": "PAPER",
+    "paper_ids": [
+      "dsfno"
+    ]
+  },
+  {
+    "date": "May 2025",
+    "display_date": "2025.05",
+    "sort_date": "2025-05-05",
+    "tag": "PAPER",
+    "title": "Velocity-Inferred Hamiltonian Neural Networks: Learning Energy-Conserving Dynamics from Position-Only Data — arXiv preprint",
+    "html": "Our preprint on <a href=\"https://arxiv.org/abs/2505.02321\">velocity-inferred Hamiltonian neural networks</a> is available on arXiv. <a href=\"https://arxiv.org/pdf/2505.02321\">[PDF]</a>",
+    "paper_ids": [
+      "vihn-preprint"
+    ]
+  },
+  {
+    "date": "May 2025",
+    "title": "KAR for symplectic learning at IJCNN",
+    "html": "<a href=\"https://doi.org/10.1109/IJCNN64981.2025.11228220\">Kolmogorov–Arnold Representation for Symplectic Learning</a> accepted to <strong>IJCNN 2025</strong>. Co-first author and project lead. <a href=\"https://arxiv.org/abs/2508.19410\">[arXiv]</a>",
+    "display_date": "2025.05",
+    "tag": "PAPER",
+    "paper_ids": [
+      "kar-hnn"
+    ]
+  },
+  {
+    "date": "April 2025",
+    "display_date": "2025.04",
+    "sort_date": "2025-04-24",
+    "tag": "PAPER",
+    "title": "The Impact of Move Schemes on Simulated Annealing Performance — arXiv preprint",
+    "html": "Our preprint on <a href=\"https://arxiv.org/abs/2504.17949\">the impact of move schemes on simulated annealing</a> is available on arXiv. <a href=\"https://arxiv.org/pdf/2504.17949\">[PDF]</a>",
+    "paper_ids": [
+      "sa-move-schemes"
+    ]
+  },
+  {
+    "date": "January 2025",
+    "title": "Neural-operator discretization mismatch at ICLR",
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=J9FgrqOOni\">discretization mismatch in neural operators</a> accepted to <strong>ICLR 2025</strong>.",
+    "display_date": "2025.01",
+    "tag": "PAPER",
+    "paper_ids": [
+      "discretization"
+    ]
+  },
+  {
+    "date": "October 2024",
+    "title": "Coordinate Transform FNO in TMLR",
+    "html": "Our work on <a href=\"https://openreview.net/forum?id=pMD7A77k3i\">Coordinate Transform Fourier Neural Operators</a> published in <strong>TMLR</strong>.",
+    "display_date": "2024.10",
+    "tag": "PAPER",
+    "paper_ids": [
+      "ctfno"
+    ]
   }
 ]

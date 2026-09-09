@@ -1,62 +1,466 @@
 [
   {
-    "title": "KAR‑HNN: Kolmogorov–Arnold Representation for Symplectic Learning",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "IJCNN",
-    "year": "2025 (accepted)",
-    "url": "",
-    "venue_url": "https://ijcnn.org/",
-    "badges": [
-      "Dynamics",
-      "HNN"
-    ]
+    "id": "hp-jepa",
+    "title": "HP-JEPA: Hierarchical Partitioning for Multi-Resolution Graph Joint-Embedding Predictive Learning",
+    "authors_html": "<strong>Ruichen Xu</strong>, Jingxiang Qu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Yann LeCun, Yuefan Deng",
+    "venue": "arXiv:2608.00491 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2608.00491"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2608.00491"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/hp-jepa.png",
+      "width": 1533,
+      "height": 657,
+      "label": "Figure 1",
+      "alt": "HP-JEPA motivation and overview: multi-resolution graph structure, limitations of fixed partitions, and adaptive resolution weighting."
+    }
   },
   {
-    "title": "RL‑QESA: Reinforcement‑Learning Quasi‑Equilibrium Simulated Annealing",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "— under review",
-    "year": "2025",
-    "url": "",
-    "venue_url": "https://aistats.org/",
-    "badges": [
-      "Optimization",
-      "RL"
-    ]
+    "id": "jeno",
+    "title": "JENO: Full-Field Latent Prediction for Sparse Inverse PDE Inference",
+    "authors_html": "<strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jingxiang Qu, Tian Xie, Jiaxing Zhang, Linsey Pang, Wenhan Gao, Ravid Shwartz-Ziv, Yuefan Deng",
+    "venue": "Manuscript · NeurIPS 2026 submission",
+    "category": "manuscripts",
+    "year": 2026,
+    "links": [
+      {
+        "label": "OpenReview submission",
+        "url": "https://openreview.net/forum?id=npUQDuAT7l"
+      },
+      {
+        "label": "Request manuscript",
+        "url": "mailto:ruichen.xu@stonybrook.edu?subject=JENO%20manuscript%20request"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/jeno.png",
+      "width": 1080,
+      "height": 591,
+      "label": "Figure 1",
+      "alt": "Student–teacher architecture for JENO, with sparse observations, latent targets, and dense recovery."
+    },
+    "note": "Submission access may require an OpenReview sign-in."
   },
   {
-    "title": "Adaptive Physics‑Guided Diffusion for PDE Recovery",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "ICASSP",
-    "year": "2026 (submitted)",
-    "url": "",
-    "venue_url": "https://2026.ieeeicassp.org/",
-    "badges": [
-      "Diffusion",
-      "PDE"
-    ]
+    "id": "iaga",
+    "title": "GAGA: Gaussianity-Aware Gaussian Approximation for Efficient 3D Molecular Generation",
+    "authors_html": "Jingxiang Qu, Wenhan Gao, <strong>Ruichen Xu</strong>, Yi Liu",
+    "venue": "ICLR 2026 · Accepted",
+    "category": "conference",
+    "year": 2026,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=Q9gz8lVyAi"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2507.09043"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2507.09043"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/iaga.png",
+      "width": 1588,
+      "height": 572,
+      "label": "Figure 1",
+      "alt": "GAGA overview showing forward noising and a Gaussian approximation that shortens the reverse generative trajectory."
+    }
   },
   {
-    "title": "Sparse/Partial‑Obs PDEBench for Operator Learning",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "ICLR Datasets & Benchmarks",
-    "year": "2026 (planned)",
-    "url": "",
-    "venue_url": "https://iclr.cc/Conferences/2026",
-    "badges": [
-      "Benchmark",
-      "Neural Operator"
-    ]
+    "id": "vihn",
+    "title": "Velocity-Inferred Hamiltonian Networks: Symplectic Dynamics from Position-Only Observations",
+    "authors_html": "<strong>Ruichen Xu</strong>, Claire Yu, Zongyu Wu, Siyao Wang, Luoyao Chen, Georgios Kementzidis, Haochun Wang, Yuefan Deng",
+    "venue": "NYSDS 2025 · SIAM Proceedings",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "SIAM DOI",
+        "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.13"
+      },
+      {
+        "label": "Related arXiv preprint",
+        "url": "https://arxiv.org/abs/2505.02321"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/vihn.png",
+      "width": 1988,
+      "height": 1048,
+      "label": "Figure 3.2",
+      "alt": "Trajectory, error, invariant, and energy comparisons for baseline and Hamiltonian neural networks on spring-mass, pendulum, two-body, and three-body systems."
+    }
   },
   {
-    "title": "Operator Learning for Implied Volatility from Options",
-    "authors": "Ruichen Xu*, ...",
-    "venue": "Journal/Conference TBD",
-    "year": "2025–2026",
-    "url": "",
-    "venue_url": "https://www.springer.com/journal/10479",
-    "badges": [
-      "AI4Finance",
-      "Volatility"
-    ]
+    "id": "discretization",
+    "title": "Discretization-invariance? On the Discretization Mismatch Errors in Neural Operators",
+    "authors_html": "Wenhan Gao, <strong>Ruichen Xu</strong>, Yuefan Deng, Yi Liu",
+    "venue": "ICLR 2025",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=J9FgrqOOni"
+      },
+      {
+        "label": "Conference page",
+        "url": "https://iclr.cc/virtual/2025/poster/30126"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=J9FgrqOOni"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/discretization.png",
+      "width": 1584,
+      "height": 496,
+      "label": "Figure 2",
+      "alt": "CROP pipeline maps an input through lifting, a neural operator on band-limited latent features, and projection to an output at any discretization."
+    }
+  },
+  {
+    "id": "kar-hnn",
+    "title": "Kolmogorov–Arnold Representation for Symplectic Learning: Advancing Hamiltonian Neural Networks",
+    "authors_html": "Zongyu Wu, <strong>Ruichen Xu</strong><sup>†</sup>, Luoyao Chen, Georgios Kementzidis, Siyao Wang, Yuefan Deng · <sup>†</sup>Co-first author and project lead",
+    "venue": "IJCNN 2025",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "IEEE DOI",
+        "url": "https://doi.org/10.1109/IJCNN64981.2025.11228220"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2508.19410"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2508.19410"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/kar-hnn.png",
+      "width": 1980,
+      "height": 676,
+      "label": "Figure 1",
+      "alt": "Kolmogorov–Arnold and multilayer-perceptron Hamiltonian neural network architectures, with energy derivatives feeding a shared training loss."
+    }
+  },
+  {
+    "id": "bimol",
+    "title": "Boundary-Informed Method of Lines for Physics-Informed Neural Networks",
+    "authors_html": "Maximilian Cederholm, Siyao Wang, Haochun Wang, <strong>Ruichen Xu</strong>, Yuefan Deng · Co-corresponding author with Yuefan Deng",
+    "venue": "NYSDS 2025 · SIAM Proceedings",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "SIAM DOI",
+        "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.12"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2510.15852"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2510.15852"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/bimol.png",
+      "width": 1892,
+      "height": 392,
+      "label": "Figure 2.1",
+      "alt": "Standard PINN and boundary-informed MOL-PINN architectures, showing spatial discretization and a temporal network trained on residual and boundary losses."
+    }
+  },
+  {
+    "id": "active-learning",
+    "title": "Physics-Informed Active Learning via Functional Simulated Annealing for Neural Operator",
+    "authors_html": "Albert Ding, Siyao Wang, Haochun Wang, <strong>Ruichen Xu</strong>, Yuefan Deng · Co-corresponding author with Yuefan Deng",
+    "venue": "NYSDS 2025 · SIAM Proceedings",
+    "category": "conference",
+    "year": 2025,
+    "links": [
+      {
+        "label": "SIAM DOI",
+        "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.14"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/active-learning.png",
+      "width": 3504,
+      "height": 876,
+      "label": "Method overview · author poster",
+      "alt": "PIAL workflow combining low-resolution data and high-resolution instances, physics-informed training losses, and simulated-annealing selection of new training examples."
+    }
+  },
+  {
+    "id": "apod",
+    "title": "APOD: Adaptive PDE-Observation Diffusion for Physics-Constrained Sampling",
+    "authors_html": "<strong>Ruichen Xu</strong>, Haochun Wang, Georgios Kementzidis, Chenhao Si, Yuefan Deng",
+    "venue": "ICML 2025 Workshop on Assessing World Models · Poster",
+    "category": "workshops",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=Z1J7LJGDxH"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=Z1J7LJGDxH"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/apod.png",
+      "width": 1789,
+      "height": 535,
+      "label": "Figure 2",
+      "alt": "APOD framework turns noisy initial distributions into samples through diffusion steps guided by observation and PDE terms."
+    }
+  },
+  {
+    "id": "rl-qesa",
+    "title": "RL-QESA: Reinforcement-Learning Quasi-Equilibrium Simulated Annealing",
+    "authors_html": "<strong>Ruichen Xu</strong>, Kai Li, Haochun Wang, Georgios Kementzidis, Wei Zhu, Yuefan Deng",
+    "venue": "2nd AI for Math Workshop at ICML 2025 · Poster",
+    "category": "workshops",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=4eAAIIBt3Q"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=4eAAIIBt3Q"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/rl-qesa.png",
+      "width": 1093,
+      "height": 562,
+      "label": "Figure 2",
+      "alt": "RL-QESA transformer cooling policy takes past state, action and reward summaries to emit the next cooling action."
+    }
+  },
+  {
+    "id": "iterative-backmapping",
+    "title": "An Iterative Framework for Generative Backmapping of Coarse-Grained Proteins",
+    "authors_html": "Georgios Kementzidis, Erin Wong, John Nicholson, <strong>Ruichen Xu</strong>, Yuefan Deng",
+    "venue": "ICML 2025 GenBio Workshop · Poster",
+    "category": "workshops",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=i2MWUFJcTc"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2505.18082"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2505.18082"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/iterative-backmapping.png",
+      "width": 1280,
+      "height": 194,
+      "label": "Figure 1",
+      "alt": "Iterative protein backmapping restores atomistic structure from ultra-coarse beads using successive prior networks and decoders."
+    }
+  },
+  {
+    "id": "multistep-backmapping",
+    "title": "Multistep Generative Backmapping of Coarse-Grained Structures",
+    "authors_html": "Georgios Kementzidis, Erin Wong, John Nicholson, <strong>Ruichen Xu</strong>, Yuefan Deng",
+    "venue": "Computer Physics Communications · 327, 110286 · 2026",
+    "category": "journals",
+    "year": 2026,
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1016/j.cpc.2026.110286"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/multistep-backmapping.png",
+      "width": 2914,
+      "height": 667,
+      "label": "Figure 3",
+      "alt": "Multistep protein backmapping pipeline, from coarse beads through intermediate structures to atomistic detail using successive generative networks."
+    }
+  },
+  {
+    "id": "dsfno",
+    "title": "Dynamic Schwartz–Fourier Neural Operator for Enhanced Expressive Power",
+    "authors_html": "Wenhan Gao, Jian Luo, <strong>Ruichen Xu</strong>, Yi Liu",
+    "venue": "Transactions on Machine Learning Research · 2025",
+    "category": "journals",
+    "year": 2025,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=B0E2yjrNb8"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=B0E2yjrNb8"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/dsfno.png",
+      "width": 1868,
+      "height": 476,
+      "label": "Figure 2",
+      "alt": "A Fourier layer uses a neural kernel generator to create a convolution kernel from input frequencies before inverse transform, bias and activation."
+    }
+  },
+  {
+    "id": "ctfno",
+    "title": "Coordinate Transform Fourier Neural Operators for Symmetries in Physical Modeling",
+    "authors_html": "Wenhan Gao, <strong>Ruichen Xu</strong>, Hong Wang, Yi Liu",
+    "venue": "Transactions on Machine Learning Research · 2024",
+    "category": "journals",
+    "year": 2024,
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=pMD7A77k3i"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=pMD7A77k3i"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/ctfno.png",
+      "width": 1702,
+      "height": 447,
+      "label": "Figure 1",
+      "alt": "CT-FNO transforms circular data to polar coordinates, applies FNO layers, and transforms solutions back while converting rotation to translation symmetry."
+    }
+  },
+  {
+    "id": "tta-forecasting",
+    "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting",
+    "authors_html": "Haochun Wang, <strong>Ruichen Xu</strong>, Georgios Kementzidis, Karen Cho, Sebastian Ramirez Villarreal, Yuefan Deng",
+    "venue": "arXiv:2605.17250 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2605.17250"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.17250"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/tta-forecasting.png",
+      "width": 2727,
+      "height": 1284,
+      "label": "Figure 3",
+      "alt": "Frequency-Aware Calibration overview shows input and output frequency-domain calibration around a frozen forecaster, adaptation using the latest matured mini-batch, and re-forecasting of the current mini-batch."
+    }
+  },
+  {
+    "id": "interpretable-no",
+    "title": "Can Data-Driven Dynamics Reveal Hidden Physics? There Is A Need for Interpretable Neural Operators",
+    "authors_html": "Wenhan Gao, Jian Luo, Fang Wan, <strong>Ruichen Xu</strong>, Xiang Liu, Haipeng Xing, Yi Liu",
+    "venue": "arXiv:2510.02683 · 2025",
+    "category": "preprints",
+    "year": 2025,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2510.02683"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2510.02683"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/interpretable-no.png",
+      "width": 2238,
+      "height": 1068,
+      "label": "Figure 1",
+      "alt": "Two grids compare analytical wave-propagation spatial dependencies on the left with patterns learned by a neural operator on the right, across five locations and times t = 1 through 6."
+    }
+  },
+  {
+    "id": "vihn-preprint",
+    "title": "Velocity-Inferred Hamiltonian Neural Networks: Learning Energy-Conserving Dynamics from Position-Only Data",
+    "authors_html": "<strong>Ruichen Xu</strong>, Zongyu Wu, Luoyao Chen, Georgios Kementzidis, Siyao Wang, Haochun Wang, Yiwei Shi, Yuefan Deng",
+    "venue": "arXiv:2505.02321 · 2025",
+    "category": "preprints",
+    "year": 2025,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2505.02321"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2505.02321"
+      }
+    ],
+    "note": "Earlier preprint; the NYSDS 2025 proceedings paper is listed separately.",
+    "figure": {
+      "path": "assets/papers/vihn-preprint.png",
+      "width": 3976,
+      "height": 1770,
+      "label": "Figure 3",
+      "alt": "Six panels compare ground-truth, baseline, and Hamiltonian neural-network predictions for a two-body system, with orbital trajectories above and kinetic, potential, and total energy over time below."
+    }
+  },
+  {
+    "id": "sa-move-schemes",
+    "title": "The Impact of Move Schemes on Simulated Annealing Performance",
+    "authors_html": "<strong>Ruichen Xu</strong>, Haochun Wang, Yuefan Deng",
+    "venue": "arXiv:2504.17949 · 2025",
+    "category": "preprints",
+    "year": 2025,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2504.17949"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2504.17949"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/sa-move-schemes.png",
+      "width": 2820,
+      "height": 1314,
+      "label": "Figure 1",
+      "alt": "Violin plots compare simulated annealing relative error as the number of moved coordinates increases, for Lennard-Jones systems with 6, 39, and 89 particles and three proposal-variance settings."
+    }
   }
 ]
