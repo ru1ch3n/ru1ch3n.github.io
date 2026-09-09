@@ -3,10 +3,19 @@
     "id": "hp-jepa",
     "title": "HP-JEPA: Hierarchical Partitioning for Multi-Resolution Graph Joint-Embedding Predictive Learning",
     "authors_html": "<strong>Ruichen Xu</strong>, Jingxiang Qu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Yann LeCun, Yuefan Deng",
-    "venue": "Manuscript",
-    "category": "manuscripts",
-    "year": null,
-    "links": [],
+    "venue": "arXiv:2608.00491 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2608.00491"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2608.00491"
+      }
+    ],
     "figure": {
       "path": "assets/papers/hp-jepa.png",
       "width": 1533,
@@ -19,17 +28,27 @@
     "id": "jeno",
     "title": "JENO: Full-Field Latent Prediction for Sparse Inverse PDE Inference",
     "authors_html": "<strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jingxiang Qu, Tian Xie, Jiaxing Zhang, Linsey Pang, Wenhan Gao, Ravid Shwartz-Ziv, Yuefan Deng",
-    "venue": "Manuscript",
+    "venue": "Manuscript · NeurIPS 2026 submission",
     "category": "manuscripts",
-    "year": null,
-    "links": [],
+    "year": 2026,
+    "links": [
+      {
+        "label": "OpenReview submission",
+        "url": "https://openreview.net/forum?id=npUQDuAT7l"
+      },
+      {
+        "label": "Request manuscript",
+        "url": "mailto:ruichen.xu@stonybrook.edu?subject=JENO%20manuscript%20request"
+      }
+    ],
     "figure": {
       "path": "assets/papers/jeno.png",
       "width": 1080,
       "height": 591,
       "label": "Figure 1",
       "alt": "Student–teacher architecture for JENO, with sparse observations, latent targets, and dense recovery."
-    }
+    },
+    "note": "Submission access may require an OpenReview sign-in."
   },
   {
     "id": "iaga",
@@ -42,6 +61,14 @@
       {
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=Q9gz8lVyAi"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2507.09043"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2507.09043"
       }
     ],
     "figure": {
@@ -63,6 +90,10 @@
       {
         "label": "SIAM DOI",
         "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.13"
+      },
+      {
+        "label": "Related arXiv preprint",
+        "url": "https://arxiv.org/abs/2505.02321"
       }
     ],
     "figure": {
@@ -88,6 +119,10 @@
       {
         "label": "Conference page",
         "url": "https://iclr.cc/virtual/2025/poster/30126"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=J9FgrqOOni"
       }
     ],
     "figure": {
@@ -109,6 +144,14 @@
       {
         "label": "IEEE DOI",
         "url": "https://doi.org/10.1109/IJCNN64981.2025.11228220"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2508.19410"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2508.19410"
       }
     ],
     "figure": {
@@ -130,6 +173,14 @@
       {
         "label": "SIAM DOI",
         "url": "https://epubs.siam.org/doi/10.1137/1.9781611978933.12"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2510.15852"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2510.15852"
       }
     ],
     "figure": {
@@ -172,6 +223,10 @@
       {
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=Z1J7LJGDxH"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=Z1J7LJGDxH"
       }
     ],
     "figure": {
@@ -193,6 +248,10 @@
       {
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=4eAAIIBt3Q"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=4eAAIIBt3Q"
       }
     ],
     "figure": {
@@ -214,6 +273,14 @@
       {
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=i2MWUFJcTc"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2505.18082"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2505.18082"
       }
     ],
     "figure": {
@@ -256,6 +323,10 @@
       {
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=B0E2yjrNb8"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=B0E2yjrNb8"
       }
     ],
     "figure": {
@@ -277,6 +348,10 @@
       {
         "label": "OpenReview",
         "url": "https://openreview.net/forum?id=pMD7A77k3i"
+      },
+      {
+        "label": "PDF",
+        "url": "https://openreview.net/pdf?id=pMD7A77k3i"
       }
     ],
     "figure": {
@@ -285,6 +360,107 @@
       "height": 447,
       "label": "Figure 1",
       "alt": "CT-FNO transforms circular data to polar coordinates, applies FNO layers, and transforms solutions back while converting rotation to translation symmetry."
+    }
+  },
+  {
+    "id": "tta-forecasting",
+    "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting",
+    "authors_html": "Haochun Wang, <strong>Ruichen Xu</strong>, Georgios Kementzidis, Karen Cho, Sebastian Ramirez Villarreal, Yuefan Deng",
+    "venue": "arXiv:2605.17250 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2605.17250"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.17250"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/tta-forecasting.png",
+      "width": 2727,
+      "height": 1284,
+      "label": "Figure 3",
+      "alt": "Frequency-Aware Calibration overview shows input and output frequency-domain calibration around a frozen forecaster, adaptation using the latest matured mini-batch, and re-forecasting of the current mini-batch."
+    }
+  },
+  {
+    "id": "interpretable-no",
+    "title": "Can Data-Driven Dynamics Reveal Hidden Physics? There Is A Need for Interpretable Neural Operators",
+    "authors_html": "Wenhan Gao, Jian Luo, Fang Wan, <strong>Ruichen Xu</strong>, Xiang Liu, Haipeng Xing, Yi Liu",
+    "venue": "arXiv:2510.02683 · 2025",
+    "category": "preprints",
+    "year": 2025,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2510.02683"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2510.02683"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/interpretable-no.png",
+      "width": 2238,
+      "height": 1068,
+      "label": "Figure 1",
+      "alt": "Two grids compare analytical wave-propagation spatial dependencies on the left with patterns learned by a neural operator on the right, across five locations and times t = 1 through 6."
+    }
+  },
+  {
+    "id": "vihn-preprint",
+    "title": "Velocity-Inferred Hamiltonian Neural Networks: Learning Energy-Conserving Dynamics from Position-Only Data",
+    "authors_html": "<strong>Ruichen Xu</strong>, Zongyu Wu, Luoyao Chen, Georgios Kementzidis, Siyao Wang, Haochun Wang, Yiwei Shi, Yuefan Deng",
+    "venue": "arXiv:2505.02321 · 2025",
+    "category": "preprints",
+    "year": 2025,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2505.02321"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2505.02321"
+      }
+    ],
+    "note": "Earlier preprint; the NYSDS 2025 proceedings paper is listed separately.",
+    "figure": {
+      "path": "assets/papers/vihn-preprint.png",
+      "width": 3976,
+      "height": 1770,
+      "label": "Figure 3",
+      "alt": "Six panels compare ground-truth, baseline, and Hamiltonian neural-network predictions for a two-body system, with orbital trajectories above and kinetic, potential, and total energy over time below."
+    }
+  },
+  {
+    "id": "sa-move-schemes",
+    "title": "The Impact of Move Schemes on Simulated Annealing Performance",
+    "authors_html": "<strong>Ruichen Xu</strong>, Haochun Wang, Yuefan Deng",
+    "venue": "arXiv:2504.17949 · 2025",
+    "category": "preprints",
+    "year": 2025,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2504.17949"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2504.17949"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/sa-move-schemes.png",
+      "width": 2820,
+      "height": 1314,
+      "label": "Figure 1",
+      "alt": "Violin plots compare simulated annealing relative error as the number of moved coordinates increases, for Lennard-Jones systems with 6, 39, and 89 particles and three proposal-variance settings."
     }
   }
 ]

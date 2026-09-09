@@ -165,6 +165,98 @@
       "source_pdf_url": "https://openreview.net/pdf?id=pMD7A77k3i",
       "source_version": "TMLR published paper, October 2024",
       "caption_verified": true
+    },
+    {
+      "id": "sa-move-schemes",
+      "image": "assets/papers/sa-move-schemes.png",
+      "source_title": "The Impact of Move Schemes on Simulated Annealing Performance",
+      "source_kind": "author-posted arXiv paper PDF",
+      "figure_number": 1,
+      "page_number": 19,
+      "source_pdf_url": "https://arxiv.org/pdf/2504.17949v1",
+      "source_url": "https://arxiv.org/abs/2504.17949",
+      "source_version": "v1",
+      "authors": [
+        "Ruichen Xu",
+        "Haochun Wang",
+        "Yuefan Deng"
+      ],
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Source figure image isolated from the PDF; lossless PNG encoding only; caption excluded; no redraw, relabeling, recoloring, or resampling.",
+      "sha256": "f559d1e8f4d0ceb4a1249d9fb2e30f7a1656d5d2675d9851e5ae04b2131957e5"
+    },
+    {
+      "id": "vihn-preprint",
+      "image": "assets/papers/vihn-preprint.png",
+      "source_title": "Velocity-Inferred Hamiltonian Neural Networks: Learning Energy-Conserving Dynamics from Position-Only Data",
+      "source_kind": "author-posted arXiv paper PDF",
+      "figure_number": 3,
+      "page_number": 16,
+      "source_pdf_url": "https://arxiv.org/pdf/2505.02321v1",
+      "source_url": "https://arxiv.org/abs/2505.02321",
+      "source_version": "v1",
+      "authors": [
+        "Ruichen Xu",
+        "Zongyu Wu",
+        "Luoyao Chen",
+        "Georgios Kementzidis",
+        "Siyao Wang",
+        "Haochun Wang",
+        "Yiwei Shi",
+        "Yuefan Deng"
+      ],
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Source figure image isolated from the PDF; lossless PNG encoding only; caption excluded; no redraw, relabeling, recoloring, or resampling.",
+      "sha256": "fecbf97d785cd2c09cbc60e4fa4546f4fda7725f7b63caab178f6b3ef05e6f5f"
+    },
+    {
+      "id": "interpretable-no",
+      "image": "assets/papers/interpretable-no.png",
+      "source_title": "Can Data-Driven Dynamics Reveal Hidden Physics? There Is A Need for Interpretable Neural Operators",
+      "source_kind": "author-posted arXiv paper PDF",
+      "figure_number": 1,
+      "page_number": 2,
+      "source_pdf_url": "https://arxiv.org/pdf/2510.02683v1",
+      "source_url": "https://arxiv.org/abs/2510.02683",
+      "source_version": "v1",
+      "authors": [
+        "Wenhan Gao",
+        "Jian Luo",
+        "Fang Wan",
+        "Ruichen Xu",
+        "Xiang Liu",
+        "Haipeng Xing",
+        "Yi Liu"
+      ],
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Figure region cropped from its PDF page and rasterized at 432 dpi; adjacent prose and caption excluded; all panels and figure labels retained; no redraw, relabeling, or recoloring.",
+      "sha256": "5b30d2a508973e3d6a0fd20f22a195e100ac2d57d89b7633715ea80cb728b9a7"
+    },
+    {
+      "id": "tta-forecasting",
+      "image": "assets/papers/tta-forecasting.png",
+      "source_title": "Towards Principled Test-Time Adaptation for Time Series Forecasting",
+      "source_kind": "author-posted arXiv paper PDF",
+      "figure_number": 3,
+      "page_number": 8,
+      "source_pdf_url": "https://arxiv.org/pdf/2605.17250v1",
+      "source_url": "https://arxiv.org/abs/2605.17250",
+      "source_version": "v1",
+      "authors": [
+        "Haochun Wang",
+        "Ruichen Xu",
+        "Georgios Kementzidis",
+        "Karen Cho",
+        "Sebastian Ramirez Villarreal",
+        "Yuefan Deng"
+      ],
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Figure region cropped from its PDF page and rasterized at 432 dpi; adjacent prose and caption excluded; all panels and figure labels retained; no redraw, relabeling, or recoloring.",
+      "sha256": "999af478db701582605550a69278f5d348f934ecb7b110a7168c19163d5f044a"
     }
   ]
 }

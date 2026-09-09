@@ -14,6 +14,7 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 PAPERS = json.loads((ROOT / 'data/papers.json').read_text())
 NEWS = json.loads((ROOT / 'data/news.json').read_text())
+SERVICE = json.loads((ROOT / 'data/service.json').read_text())
 ESC = html.escape
 DATE = 'September 2026'
 PROFILES = [
@@ -36,7 +37,7 @@ def profile_links():
 
 def navigation(current):
     groups = [
-        ('', [('Home', 'index.html'), ('Bio', 'bio.html')]),
+        ('', [('Home', 'index.html'), ('Bio', 'bio.html'), ('Academic service', 'bio.html#service')]),
         ('Research', [('Topics', 'research.html'), ('Papers', 'papers.html')]),
         ('Teaching', [('Courses & mentoring', 'teaching.html')]),
         ('Updates', [('News', 'news.html'), ('Curriculum vitae', 'assets/Ruichen_Xu_CV.pdf')]),
@@ -70,7 +71,7 @@ def page(filename, title, description, body, home=False):
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="https://ru1ch3n.github.io/assets/profile.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/academic.css?v=20260909-figures">
+  <link rel="stylesheet" href="assets/academic.css?v=20260909-service">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -96,7 +97,7 @@ def paper_item(p, selected=False):
     title = link(p['title'], p['links'][0]['url']) if p['links'] else ESC(p['title'])
     links_html = ' '.join(link(x['label'], x['url']) for x in p['links'])
     # Keep unpublished manuscripts separate without announcing unverified venues.
-    venue = 'Manuscript' if p['category'] == 'manuscripts' else p['venue'].replace(' · Accepted', '')
+    venue = p['venue'].replace(' · Accepted', '')
     identifier = 'selected-' + p['id'] if selected else p['id']
     figure = p.get('figure')
     figure_html = ''
@@ -114,6 +115,7 @@ def paper_item(p, selected=False):
       <h3 class="paper-title">{title}</h3>
       <p class="authors">{p['authors_html']}</p>
       <p class="venue"><strong>{ESC(venue)}</strong></p>
+      {f'<p class="small subtle">{ESC(p["note"])}</p>' if p.get('note') else ''}
       {f'<div class="paper-links">{links_html}</div>' if links_html else ''}
       </div>
     </li>'''
@@ -132,6 +134,19 @@ def news_list(items):
           <span class="news-text">{n['html']}</span>
         </p></li>''')
     return '<ul class="news-list">' + '\n'.join(rows) + '</ul>'
+
+
+def service_list(group):
+    rows = []
+    for item in SERVICE[group]:
+        note = ' · ' + ESC(item['note']) if item.get('note') else ''
+        rows.append(f'<li>{link(item["venue"], item["url"])} — {ESC(item["years"])}{note}</li>')
+    return '<ul class="service-list">' + ''.join(rows) + '</ul>'
+
+
+def recognition():
+    award = SERVICE['recognition']
+    return f'<p class="reviewer-recognition"><strong>{link(award["title"], award["url"])}</strong> · {ESC(award["date"])}<br><span class="small">{ESC(award["description"])}</span></p>'
 
 
 def jump_links(items):
@@ -161,14 +176,20 @@ home = f'''<section class="profile" aria-label="Profile and contact">
   <li><strong>Learning from partial observations.</strong> Neural operators and benchmarks for reconstructing PDE fields from sparse and irregular measurements.
   <span class="related">{link('PartialObs–PDEBench', 'research.html#partialobs')} · {link('Discretization mismatch', 'papers.html#discretization')}</span></li>
   <li><strong>Predictive representations for scientific data.</strong> Joint-embedding learning for PDE inference and multi-resolution graph representations.
-  <span class="related">{link('JENO', 'research.html#jepa')} · {link('HP-JEPA', 'research.html#jepa')}</span></li>
+  <span class="related">{link('JENO', 'https://openreview.net/forum?id=npUQDuAT7l')} · {link('HP-JEPA', 'https://arxiv.org/abs/2608.00491')}</span></li>
   <li><strong>Physics-aware generation and optimization.</strong> Diffusion, simulated annealing, and LLM-guided search for physical systems and molecular design.
   <span class="related">{link('APOD', 'research.html#generative')} · {link('RL-QESA', 'papers.html#rl-qesa')} · {link('Molecular optimization', 'research.html#molecules')}</span></li>
 </ul></section>
 <section aria-labelledby="news"><div class="section-top"><h2 id="news">News</h2>{link('All news', 'news.html')}</div>
 <div class="news-window" tabindex="0" role="region" aria-label="Recent news, scroll for older updates">{news_list(NEWS)}</div></section>
+<section aria-labelledby="academic-service"><div class="section-top"><h2 id="academic-service">Academic service</h2>{link('Reviewing experience', 'bio.html#service')}</div>
+{recognition()}
+<p><strong>Conference reviewer:</strong> {link('ICLR', 'https://iclr.cc/')} (2026, 2027), {link('ICML', 'https://icml.cc/Conferences/2026')} (2026), {link('NeurIPS', 'https://neurips.cc/Conferences/2026')} (2026), and {link('IJCNN', 'https://www.inns.org/ijcnn-home')} (2025, 2026).</p>
+<p><strong>Journal reviewer:</strong> {link('TMLR', 'https://jmlr.org/tmlr/')} (2026), {link('IEEE TNNLS', 'https://cis.ieee.org/publications/t-neural-networks-and-learning-systems')} (2025), and {link('Neurocomputing', 'https://www.sciencedirect.com/journal/neurocomputing')} (2026).</p>
+<p><strong>Workshop reviewer:</strong> {link('AI for Math @ ICML', 'https://openreview.net/group?id=ICML.cc/2025/Workshop/AI4MATH')} (2025).</p>
+</section>
 <section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2>{link('All publications', 'papers.html')}</div>
-{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
+{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
 </section>'''
 page('index.html', 'Home', 'Ruichen Xu (Bill Xu), Ph.D. candidate at Stony Brook University. Research in scientific machine learning, neural operators, generative models, and optimization.', home, home=True)
 
@@ -185,11 +206,11 @@ research = jump_links([('Partial observations', 'partialobs'), ('Representations
 <section class="project" aria-labelledby="jepa"><h2 id="jepa">Predictive representation learning</h2>
 <p>I investigate joint-embedding predictive architectures for scientific data, including student–teacher learning, latent full-field prediction, and representations across spatial resolutions.</p>
 <ul>
-<li><strong>JENO.</strong> Full-field latent prediction for sparse inverse PDE inference.</li>
-<li><strong>HP-JEPA.</strong> Hierarchical partitioning for multi-resolution graph joint-embedding predictive learning.</li>
+<li><a href="https://openreview.net/forum?id=npUQDuAT7l"><strong>JENO.</strong></a> Full-field latent prediction for sparse inverse PDE inference.</li>
+<li><a href="https://arxiv.org/abs/2608.00491"><strong>HP-JEPA.</strong></a> Hierarchical partitioning for multi-resolution graph joint-embedding predictive learning.</li>
 </ul>
 <p class="project-meta">2026–present · JEPA · PDE inference · Graph representation learning</p>
-<p><a href="papers.html#manuscripts">Manuscripts and author lists</a></p>
+<p><a href="papers.html#preprints">arXiv preprints</a> · <a href="papers.html#manuscripts">Submitted manuscripts</a></p>
 </section>
 <section class="project" aria-labelledby="generative"><h2 id="generative">Physics-aware generation &amp; optimization</h2>
 <p>I develop sampling and optimization methods that incorporate physical constraints, combining diffusion models, simulated annealing, and reinforcement learning.</p>
@@ -207,11 +228,11 @@ research = jump_links([('Partial observations', 'partialobs'), ('Representations
 <p class="project-meta">2025–present · LLMs · Simulated annealing · Molecular design</p>
 <p class="small">Related work: <a href="papers.html#iaga">GAGA: 3D molecular generation</a> · <a href="papers.html#multistep-backmapping">Generative backmapping of coarse-grained structures</a></p>
 </section>
-<section aria-labelledby="publications"><h2 id="publications">Publications</h2><p>See the <a href="papers.html">complete publication list</a> for conference, journal, and workshop papers, followed by manuscripts.</p></section>
+<section aria-labelledby="publications"><h2 id="publications">Publications</h2><p>See the <a href="papers.html">complete publication list</a> for arXiv preprints, conference, journal, and workshop papers, and submitted manuscripts.</p></section>
 '''
 page('research.html', 'Research topics', 'Research by Ruichen Xu: partial-observation PDE learning, predictive representations, physics-aware generation, and molecular optimization.', research)
 
-groups = [('conference', 'Conference & proceedings papers', 'conferences'), ('journals', 'Journal articles', 'journals'), ('workshops', 'Workshop papers', 'workshops'), ('manuscripts', 'Manuscripts', 'manuscripts')]
+groups = [('preprints', 'arXiv preprints', 'preprints'), ('conference', 'Conference & proceedings papers', 'conferences'), ('journals', 'Journal articles', 'journals'), ('workshops', 'Workshop papers', 'workshops'), ('manuscripts', 'Submitted manuscripts', 'manuscripts')]
 papers_body = jump_links([(name, identifier) for _, name, identifier in groups])
 papers_body += '<p>My publications in scientific machine learning, computational physics, dynamical systems, and molecular generation. See also ' + link('Google Scholar', PROFILES[0][1]) + ' and ' + link('OpenReview', PROFILES[2][1]) + '.</p>'
 for category, title, identifier in groups:
@@ -254,7 +275,7 @@ teaching = jump_links([('Instructor', 'instructor'), ('Teaching assistant', 'ta'
 </section>'''
 page('teaching.html', 'Teaching & mentoring', 'Ruichen Xu’s teaching and research mentoring at Stony Brook University and NYU Courant.', teaching)
 
-bio = jump_links([('Biography', 'biography'), ('Education', 'education'), ('Experience', 'experience'), ('Service', 'service')]) + '''
+bio = jump_links([('Biography', 'biography'), ('Education', 'education'), ('Experience', 'experience'), ('Reviewing & service', 'service')]) + '''
 <section aria-labelledby="biography"><h2 id="biography">Biography</h2>
 <p>Ruichen Xu (Bill Xu) is a Ph.D. candidate in Computational Applied Mathematics at Stony Brook University, advised by Yuefan Deng. His research focuses on scientific machine learning, including neural operators for partial observations and inverse problems, predictive representation learning, physics-aware generative models, and LLM-guided optimization.</p>
 <p>He received an M.S. in Mathematics from the Courant Institute at New York University, an M.S. in Statistics from the University of California, Davis, and a bachelor’s degree in Financial Mathematics from Beijing University of Chemical Technology.</p>
@@ -274,15 +295,20 @@ bio = jump_links([('Biography', 'biography'), ('Education', 'education'), ('Expe
 <li><div><h3>Instructor &amp; teaching assistant</h3><p>Department of Applied Mathematics &amp; Statistics, Stony Brook University.</p><p><a href="teaching.html">Courses and appointments</a></p></div><div class="period">2022–present</div></li>
 <li><div><h3>Recitation leader &amp; grader</h3><p>Courant Institute, New York University.</p></div><div class="period">2020–2022</div></li>
 </ul></section>
-<section aria-labelledby="service"><h2 id="service">Talks &amp; academic service</h2>
-<h3>Academic service</h3>
-<p>Reviewer for IJCNN, TNNLS, ICLR, ICML, NeurIPS, and Neurocomputing. Recognized as an <strong>ICML 2026 Gold Reviewer</strong>.</p>
+<section aria-labelledby="service"><h2 id="service">Reviewing &amp; academic service</h2>
+''' + recognition() + '''
+<h3>Conference reviewer</h3>
+''' + service_list('conference_reviewing') + '''
+<h3>Journal reviewer</h3>
+''' + service_list('journal_reviewing') + '''
+<h3>Workshop reviewer</h3>
+''' + service_list('workshop_reviewing') + '''
 <h3>Talks at IACS</h3>
 <ul><li>AI for PDEs — IACS Student Seminar, 2025.</li><li>Diffusion4PDE — IACS lightning talk, 2025.</li><li>Active learning for neural operators — IACS lightning talk, 2024.</li></ul>
 </section>'''
 page('bio.html', 'Biography', 'Biography, education, experience, talks, and academic service of Ruichen Xu (Bill Xu).', bio)
 
-news_body = '<p>Research, publication, teaching, and mentoring updates.</p>'
+news_body = '<p>Research, publications, reviewing, teaching, and mentoring updates.</p>'
 news_body += jump_links([(str(year), 'year-' + str(year)) for year in [2026, 2025, 2024]])
 for year in [2026, 2025, 2024]:
     news_body += f'<section aria-labelledby="year-{year}"><h2 id="year-{year}">{year}</h2>' + news_list([n for n in NEWS if str(year) in n['date']]) + '</section>'

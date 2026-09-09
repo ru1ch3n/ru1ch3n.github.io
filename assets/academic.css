@@ -226,6 +226,10 @@ sup {
 .tag-paper { background: #ece8ff; color: #4a2aa6; border-color: #d8d1ff; }
 .tag-teaching { background: #e8f0fe; color: #1a4fb3; border-color: #cfe0ff; }
 .tag-group { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
+.tag-service { background: #e9f6ef; color: #1e5c3b; border-color: #c7e5d3; }
+.tag-award { background: #fff4cf; color: #795b12; border-color: #e9d69d; }
+.reviewer-recognition { border-left: 3px solid #b28a2c; padding: .2rem 0 .2rem .8rem; }
+.service-list li { margin-bottom: .35rem; }
 .paper-list {
   list-style:none;
   padding:0;
