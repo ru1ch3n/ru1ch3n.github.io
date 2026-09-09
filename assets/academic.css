@@ -487,3 +487,8 @@ a {
 @media print { .news-window { max-height: none; overflow: visible; } .paper-with-figure { grid-template-columns: 10rem minmax(0, 1fr); } }
 
 .name-pronunciation { font-size: .9rem; line-height: 1.7; margin: .5rem 0 0; color: #4b5563; }
+
+.sidebar { max-height: calc(100vh - 3rem); overflow-y: auto; }
+.nav-foot p { margin: 0 0 .85rem; }
+.nav-foot p:last-child { margin-bottom: 0; }
+.institution-years { font-variant-numeric: tabular-nums; }

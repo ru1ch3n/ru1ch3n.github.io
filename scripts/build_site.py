@@ -72,7 +72,7 @@ def page(filename, title, description, body, home=False):
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="https://ru1ch3n.github.io/assets/profile.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/academic.css?v=20260909-pronunciation">
+  <link rel="stylesheet" href="assets/academic.css?v=20260909-institutions">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -80,7 +80,12 @@ def page(filename, title, description, body, home=False):
   <aside class="sidebar">
     <a class="site-name" href="index.html">Ruichen Xu</a>
     <nav aria-label="Primary navigation">{navigation(filename)}</nav>
-    <div class="nav-foot">Applied Mathematics<br>Stony Brook University</div>
+    <div class="nav-foot" aria-label="Institutions since 2015">
+      <p>Stony Brook University<br><span class="institution-years">2022–present</span></p>
+      <p>New York University<br>Courant Institute<br><span class="institution-years">2020–2022</span></p>
+      <p>University of California, Davis<br><span class="institution-years">2019–2020</span></p>
+      <p>Beijing University of Chemical Technology<br><span class="institution-years">2015–2019</span></p>
+    </div>
   </aside>
   <main class="main" id="main" tabindex="-1">
     <header class="page-title"><h1>{heading}</h1>{pronunciation}</header>
