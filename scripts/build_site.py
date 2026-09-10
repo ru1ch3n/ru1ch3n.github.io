@@ -165,7 +165,7 @@ def courses(rows, caption):
         f'<tr><td class="code">{code}</td><td>{title}</td><td>{term}</td></tr>' for code, title, term in rows) + '</tbody></table></div>'
 
 
-INTRO = '''<p>I am a Ph.D. candidate in <strong>Computational Applied Mathematics</strong> at <a href="https://www.stonybrook.edu/">Stony Brook University</a>, advised by <strong>Yuefan Deng</strong>. My research lies at the intersection of machine learning and scientific computing, with a focus on <strong>AI for Science</strong>.</p>
+INTRO = '''<p>I am a Ph.D. candidate in <strong>Computational Applied Mathematics</strong> at <a href="https://www.stonybrook.edu/">Stony Brook University</a>, advised by <strong>Dr. Yuefan Deng</strong>. My research lies at the intersection of machine learning and scientific computing, with a focus on <strong>AI for Science</strong>.</p>
 <p>I study how learning systems can use incomplete observations and physical structure to solve scientific problems. My work spans neural operators, predictive representation learning, physics-aware generative models, and LLM-guided optimization. I also teach applied mathematics and mentor student research at Stony Brook.</p>'''
 
 home = f'''<section class="profile" aria-label="Profile and contact">
@@ -284,7 +284,7 @@ page('teaching.html', 'Teaching & mentoring', 'Ruichen Xu’s teaching and resea
 
 bio = jump_links([('Biography', 'biography'), ('Education', 'education'), ('Experience', 'experience'), ('Reviewing & service', 'service')]) + '''
 <section aria-labelledby="biography"><h2 id="biography">Biography</h2>
-<p>Ruichen Xu (Bill Xu) is a Ph.D. candidate in Computational Applied Mathematics at Stony Brook University, advised by Yuefan Deng. His research focuses on scientific machine learning, including neural operators for partial observations and inverse problems, predictive representation learning, physics-aware generative models, and LLM-guided optimization.</p>
+<p>Ruichen Xu (Bill Xu) is a Ph.D. candidate in Computational Applied Mathematics at Stony Brook University, advised by Dr. Yuefan Deng. His research focuses on scientific machine learning, including neural operators for partial observations and inverse problems, predictive representation learning, physics-aware generative models, and LLM-guided optimization.</p>
 <p>He received an M.S. in Mathematics from the Courant Institute at New York University, an M.S. in Statistics from the University of California, Davis, and a bachelor’s degree in Financial Mathematics from Beijing University of Chemical Technology.</p>
 <p>Alongside research, he teaches applied mathematics and mentors AI4Science projects at Stony Brook University. His work is supported by reproducible training and evaluation pipelines for large-scale experiments.</p>
 <p><a href="assets/Ruichen_Xu_CV.pdf">Curriculum vitae (PDF)</a> · <a href="mailto:ruichen.xu@stonybrook.edu">Email</a></p>
