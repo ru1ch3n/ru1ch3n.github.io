@@ -1,5 +1,16 @@
 [
   {
+    "date": "September 2026",
+    "display_date": "2026.09",
+    "sort_date": "2026-09-16",
+    "tag": "PAPER",
+    "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting accepted at TMLR with minor revision",
+    "html": "Our paper, <a href=\"https://openreview.net/forum?id=bA2bMEOUFL\">Towards Principled Test-Time Adaptation for Time Series Forecasting</a>, was <strong>accepted at TMLR with minor revision</strong>. <a href=\"https://arxiv.org/abs/2605.17250\">[arXiv]</a>",
+    "paper_ids": [
+      "tta-forecasting"
+    ]
+  },
+  {
     "date": "August 2026",
     "display_date": "2026.08",
     "sort_date": "2026-08-28",

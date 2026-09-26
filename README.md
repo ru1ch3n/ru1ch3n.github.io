@@ -14,7 +14,7 @@ The September 2026 redesign takes its layout cues from [Chenyu You’s academic 
 - `news.html` — research timeline
 - `assets/academic.css` — shared responsive academic layout
 - `assets/Ruichen_Xu_CV.pdf` — current curriculum vitae
-- `data/papers.json` — 18 bibliography records, including 5 arXiv preprints and 1 submitted manuscript
+- `data/papers.json` — 18 bibliography records, including 4 arXiv preprints and 1 submitted manuscript
 - `data/news.json` — news records migrated from the existing site
 - `data/service.json` — conference, journal, and workshop reviewing, plus the ICML 2026 Gold Reviewer recognition
 - `assets/papers/` — one source figure for every publication and manuscript

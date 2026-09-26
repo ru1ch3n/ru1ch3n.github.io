@@ -380,10 +380,14 @@
     "id": "tta-forecasting",
     "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting",
     "authors_html": "Haochun Wang, <strong>Ruichen Xu</strong>, Georgios Kementzidis, Karen Cho, Sebastian Ramirez Villarreal, Yuefan Deng",
-    "venue": "arXiv:2605.17250 · 2026",
-    "category": "preprints",
+    "venue": "Transactions on Machine Learning Research (TMLR) · 2026 · accepted with minor revision",
+    "category": "journals",
     "year": 2026,
     "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=bA2bMEOUFL"
+      },
       {
         "label": "arXiv",
         "url": "https://arxiv.org/abs/2605.17250"
