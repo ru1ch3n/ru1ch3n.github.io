@@ -34,15 +34,16 @@
 <p>My research connects machine learning with scientific computing. I am particularly interested in learning from partial observations, representing physical structure, and evaluating models through reproducible experiments.</p>
 <section class="project" aria-labelledby="partialobs"><h2 id="partialobs">Partial observations &amp; neural operators</h2>
 <p>Many scientific systems are observed through sparse sensors or incomplete measurements. I study neural operators and inference methods that recover full fields from these observations, and how their predictions change across resolutions and observation patterns.</p>
-<h3>PartialObs–PDEBench</h3>
-<p>A benchmark for sparse, irregular, sensor-style, and masked PDE observations. It brings together datasets, observation configurations, and evaluation metrics for neural operators, diffusion models, and physics-aware baselines.</p>
+<h3>PDE-OBS: Controlled Evaluation Across Observation Patterns</h3>
+<p>A benchmark for physical-field reconstruction and forecasting under changing measurement density and spatial layout. PDE-OBS combines 560,000 fields and trajectories from seven PDE families with configurable observation operators and seven adapted baseline methods, keeping prediction targets and data splits fixed across observation patterns.</p>
 <p class="project-meta">2025–present · PDE learning · Partial observations · Benchmarking</p>
-<p><a href="https://ru1ch3n.github.io/PartialObs--PDEBench/">Project website</a> · <a href="https://github.com/ru1ch3n/PartialObs--PDEBench">Code</a> · <a href="pdeobs/index.html">Benchmark resources</a></p>
+<p><a href="https://arxiv.org/abs/2609.36521">arXiv</a> · <a href="https://arxiv.org/pdf/2609.36521">PDF</a> · <a href="https://github.com/ru1ch3n/PDE-OBS">Code</a> · <a href="pdeobs/index.html">Benchmark resources</a></p>
 <p class="small">Related papers: <a href="papers.html#discretization">Discretization mismatch in neural operators</a> · <a href="papers.html#dsfno">Dynamic Schwartz–Fourier Neural Operator</a> · <a href="papers.html#ctfno">Coordinate Transform FNO</a></p>
 </section>
 <section class="project" aria-labelledby="jepa"><h2 id="jepa">Predictive representation learning</h2>
 <p>I investigate joint-embedding predictive architectures for scientific data, including student–teacher learning, latent full-field prediction, and representations across spatial resolutions.</p>
 <ul>
+<li><a href="https://arxiv.org/abs/2609.36527"><strong>SCOPE.</strong></a> Observation-conditioned full-target prediction and physical reconstruction for single-pass sparse PDE inference. <a href="https://arxiv.org/pdf/2609.36527">[PDF]</a> <a href="https://github.com/ru1ch3n/SCOPE">[Code]</a></li>
 <li><a href="https://openreview.net/forum?id=npUQDuAT7l"><strong>JENO.</strong></a> Full-field latent prediction for sparse inverse PDE inference.</li>
 <li><a href="https://arxiv.org/abs/2608.00491"><strong>HP-JEPA.</strong></a> Hierarchical partitioning for multi-resolution graph joint-embedding predictive learning.</li>
 </ul>

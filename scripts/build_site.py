@@ -181,16 +181,16 @@ home = f'''<section class="profile" aria-label="Profile and contact">
 <section aria-labelledby="research"><h2 id="research">Research</h2>
 <ul class="research-list">
   <li><strong>Learning from partial observations.</strong> Neural operators and benchmarks for reconstructing PDE fields from sparse and irregular measurements.
-  <span class="related">{link('PartialObs–PDEBench', 'research.html#partialobs')} · {link('Discretization mismatch', 'papers.html#discretization')}</span></li>
+  <span class="related">{link('PDE-OBS', 'https://arxiv.org/abs/2609.36521')} · {link('Discretization mismatch', 'papers.html#discretization')}</span></li>
   <li><strong>Predictive representations for scientific data.</strong> Joint-embedding learning for PDE inference and multi-resolution graph representations.
-  <span class="related">{link('JENO', 'https://openreview.net/forum?id=npUQDuAT7l')} · {link('HP-JEPA', 'https://arxiv.org/abs/2608.00491')}</span></li>
+  <span class="related">{link('SCOPE', 'https://arxiv.org/abs/2609.36527')} · {link('HP-JEPA', 'https://arxiv.org/abs/2608.00491')}</span></li>
   <li><strong>Physics-aware generation and optimization.</strong> Diffusion, simulated annealing, and LLM-guided search for physical systems and molecular design.
   <span class="related">{link('APOD', 'research.html#generative')} · {link('RL-QESA', 'papers.html#rl-qesa')} · {link('Molecular optimization', 'research.html#molecules')}</span></li>
 </ul></section>
 <section aria-labelledby="news"><div class="section-top"><h2 id="news">News</h2>{link('All news', 'news.html')}</div>
 <div class="news-window" tabindex="0" role="region" aria-label="Recent news, scroll for older updates">{news_list(NEWS)}</div></section>
 <section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2>{link('All publications', 'papers.html')}</div>
-{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['tta-forecasting', 'hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
+{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['scope', 'pde-obs', 'tta-forecasting', 'hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
 </section>
 <section aria-labelledby="academic-service"><div class="section-top"><h2 id="academic-service">Academic service</h2>{link('Reviewing experience', 'bio.html#service')}</div>
 {recognition()}
@@ -204,15 +204,16 @@ research = jump_links([('Partial observations', 'partialobs'), ('Representations
 <p>My research connects machine learning with scientific computing. I am particularly interested in learning from partial observations, representing physical structure, and evaluating models through reproducible experiments.</p>
 <section class="project" aria-labelledby="partialobs"><h2 id="partialobs">Partial observations &amp; neural operators</h2>
 <p>Many scientific systems are observed through sparse sensors or incomplete measurements. I study neural operators and inference methods that recover full fields from these observations, and how their predictions change across resolutions and observation patterns.</p>
-<h3>PartialObs–PDEBench</h3>
-<p>A benchmark for sparse, irregular, sensor-style, and masked PDE observations. It brings together datasets, observation configurations, and evaluation metrics for neural operators, diffusion models, and physics-aware baselines.</p>
+<h3>PDE-OBS: Controlled Evaluation Across Observation Patterns</h3>
+<p>A benchmark for physical-field reconstruction and forecasting under changing measurement density and spatial layout. PDE-OBS combines 560,000 fields and trajectories from seven PDE families with configurable observation operators and seven adapted baseline methods, keeping prediction targets and data splits fixed across observation patterns.</p>
 <p class="project-meta">2025–present · PDE learning · Partial observations · Benchmarking</p>
-<p><a href="https://ru1ch3n.github.io/PartialObs--PDEBench/">Project website</a> · <a href="https://github.com/ru1ch3n/PartialObs--PDEBench">Code</a> · <a href="pdeobs/index.html">Benchmark resources</a></p>
+<p><a href="https://arxiv.org/abs/2609.36521">arXiv</a> · <a href="https://arxiv.org/pdf/2609.36521">PDF</a> · <a href="https://github.com/ru1ch3n/PDE-OBS">Code</a> · <a href="pdeobs/index.html">Benchmark resources</a></p>
 <p class="small">Related papers: <a href="papers.html#discretization">Discretization mismatch in neural operators</a> · <a href="papers.html#dsfno">Dynamic Schwartz–Fourier Neural Operator</a> · <a href="papers.html#ctfno">Coordinate Transform FNO</a></p>
 </section>
 <section class="project" aria-labelledby="jepa"><h2 id="jepa">Predictive representation learning</h2>
 <p>I investigate joint-embedding predictive architectures for scientific data, including student–teacher learning, latent full-field prediction, and representations across spatial resolutions.</p>
 <ul>
+<li><a href="https://arxiv.org/abs/2609.36527"><strong>SCOPE.</strong></a> Observation-conditioned full-target prediction and physical reconstruction for single-pass sparse PDE inference. <a href="https://arxiv.org/pdf/2609.36527">[PDF]</a> <a href="https://github.com/ru1ch3n/SCOPE">[Code]</a></li>
 <li><a href="https://openreview.net/forum?id=npUQDuAT7l"><strong>JENO.</strong></a> Full-field latent prediction for sparse inverse PDE inference.</li>
 <li><a href="https://arxiv.org/abs/2608.00491"><strong>HP-JEPA.</strong></a> Hierarchical partitioning for multi-resolution graph joint-embedding predictive learning.</li>
 </ul>
@@ -324,7 +325,8 @@ page('news.html', 'News', 'Research, publication, teaching, and mentoring update
 # Retain the legacy introductory record with the same current homepage copy.
 (ROOT / 'data/intro.json').write_text(json.dumps({'html': INTRO}, ensure_ascii=False, indent=2) + '\n')
 urls = ['https://ru1ch3n.github.io/' + ('' if name == 'index.html' else name) for name in ['index.html', 'bio.html', 'research.html', 'papers.html', 'teaching.html', 'news.html']]
-(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{url}</loc><lastmod>2026-09-09</lastmod></url>\n' for url in urls) + '</urlset>\n')
+updated_urls = {'https://ru1ch3n.github.io/' + name for name in ['', 'research.html', 'papers.html', 'news.html']}
+(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{url}</loc><lastmod>{"2026-09-29" if url in updated_urls else "2026-09-09"}</lastmod></url>\n' for url in urls) + '</urlset>\n')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--stage', action='store_true', help='Copy the published site to dist/ for private review.')

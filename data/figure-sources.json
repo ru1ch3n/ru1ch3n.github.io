@@ -2,6 +2,32 @@
   "page_numbering": "1-based PDF pages",
   "figures": [
     {
+      "id": "scope",
+      "image": "assets/papers/scope.png",
+      "source_title": "SCOPE: Observation-Conditioned Full-Target Prediction for Sparse PDE Inference",
+      "source_kind": "author-posted arXiv paper PDF",
+      "figure_number": 1,
+      "page_number": 2,
+      "sha256": "6a29cc93003cc7d815ff38b164ade2e1a3cd18a37e938f69ded7131ba59f9999",
+      "source_pdf_url": "https://arxiv.org/pdf/2609.36527v1",
+      "source_version": "arXiv v1, 29 September 2026",
+      "caption_verified": true,
+      "source_pdf_sha256": "fff6e48c7744f660657be9669349c3ae1caadebfacccfea1a19db6b120a719ee"
+    },
+    {
+      "id": "pde-obs",
+      "image": "assets/papers/pde-obs.png",
+      "source_title": "PDE-OBS: Controlled Evaluation Across Observation Patterns",
+      "source_kind": "author-posted arXiv paper PDF",
+      "figure_number": 1,
+      "page_number": 2,
+      "sha256": "4f4ac635e863eb36a1d3fbdf3a1ee1a4ea09802d08b840907ce70fc2411b1ec4",
+      "source_pdf_url": "https://arxiv.org/pdf/2609.36521v1",
+      "source_version": "arXiv v1, 29 September 2026",
+      "caption_verified": true,
+      "source_pdf_sha256": "a466a2de58036475e9a61a5e2a2af6f2da516fa75b4d428d48b87080254cc161"
+    },
+    {
       "id": "hp-jepa",
       "image": "assets/papers/hp-jepa.png",
       "source_title": "HP-JEPA: Hierarchical Partitioning for Multi-Resolution Graph Joint-Embedding Prediction Architecture",

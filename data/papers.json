@@ -1,5 +1,65 @@
 [
   {
+    "id": "scope",
+    "title": "SCOPE: Observation-Conditioned Full-Target Prediction for Sparse PDE Inference",
+    "authors_html": "<strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jiacheng Qiu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Prakhar Mehrotra, Yann LeCun, Yuefan Deng",
+    "venue": "arXiv:2609.36527 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2609.36527"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2609.36527"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ru1ch3n/SCOPE"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/scope.png",
+      "width": 1413,
+      "height": 798,
+      "label": "Figure 1",
+      "alt": "SCOPE overview showing changing observation coverage, observation-conditioned predictions, and full-field latent and physical reconstruction targets."
+    },
+    "summary": "Couples full-field latent prediction with physical reconstruction to recover complete PDE fields from sparse observations in a single pass."
+  },
+  {
+    "id": "pde-obs",
+    "title": "PDE-OBS: Controlled Evaluation Across Observation Patterns",
+    "authors_html": "<strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jiacheng Qiu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Yann LeCun, Yuefan Deng",
+    "venue": "arXiv:2609.36521 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2609.36521"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2609.36521"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ru1ch3n/PDE-OBS"
+      }
+    ],
+    "figure": {
+      "path": "assets/papers/pde-obs.png",
+      "width": 1413,
+      "height": 798,
+      "label": "Figure 1",
+      "alt": "PDE-OBS overview linking seven PDE families, controlled observation patterns, and reconstruction and forecasting under matched and shifted observations."
+    },
+    "summary": "Benchmarks PDE reconstruction and forecasting across changing observation patterns while holding physical records, prediction targets, and data splits fixed."
+  },
+  {
     "id": "hp-jepa",
     "title": "HP-JEPA: Hierarchical Partitioning for Multi-Resolution Graph Joint-Embedding Predictive Learning",
     "authors_html": "<strong>Ruichen Xu</strong>, Jingxiang Qu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Yann LeCun, Yuefan Deng",

@@ -44,14 +44,24 @@
 <section aria-labelledby="research"><h2 id="research">Research</h2>
 <ul class="research-list">
   <li><strong>Learning from partial observations.</strong> Neural operators and benchmarks for reconstructing PDE fields from sparse and irregular measurements.
-  <span class="related"><a href="research.html#partialobs">PartialObs–PDEBench</a> · <a href="papers.html#discretization">Discretization mismatch</a></span></li>
+  <span class="related"><a href="https://arxiv.org/abs/2609.36521">PDE-OBS</a> · <a href="papers.html#discretization">Discretization mismatch</a></span></li>
   <li><strong>Predictive representations for scientific data.</strong> Joint-embedding learning for PDE inference and multi-resolution graph representations.
-  <span class="related"><a href="https://openreview.net/forum?id=npUQDuAT7l">JENO</a> · <a href="https://arxiv.org/abs/2608.00491">HP-JEPA</a></span></li>
+  <span class="related"><a href="https://arxiv.org/abs/2609.36527">SCOPE</a> · <a href="https://arxiv.org/abs/2608.00491">HP-JEPA</a></span></li>
   <li><strong>Physics-aware generation and optimization.</strong> Diffusion, simulated annealing, and LLM-guided search for physical systems and molecular design.
   <span class="related"><a href="research.html#generative">APOD</a> · <a href="papers.html#rl-qesa">RL-QESA</a> · <a href="research.html#molecules">Molecular optimization</a></span></li>
 </ul></section>
 <section aria-labelledby="news"><div class="section-top"><h2 id="news">News</h2><a href="news.html">All news</a></div>
 <div class="news-window" tabindex="0" role="region" aria-label="Recent news, scroll for older updates"><ul class="news-list"><li><p>
+          <span class="news-prefix"><span class="news-date">[2026.09]</span>
+          <span class="news-tag tag-paper">PAPER</span></span>
+          <span class="news-text"><a href="https://arxiv.org/abs/2609.36527"><strong>SCOPE</strong></a>, our work on single-pass PDE recovery from sparse observations, is available on arXiv. <a href="https://arxiv.org/pdf/2609.36527">[PDF]</a> <a href="https://github.com/ru1ch3n/SCOPE">[Code]</a></span>
+        </p></li>
+<li><p>
+          <span class="news-prefix"><span class="news-date">[2026.09]</span>
+          <span class="news-tag tag-paper">PAPER</span></span>
+          <span class="news-text"><a href="https://arxiv.org/abs/2609.36521"><strong>PDE-OBS</strong></a>, our benchmark for evaluating PDE models across observation patterns, is available on arXiv. <a href="https://arxiv.org/pdf/2609.36521">[PDF]</a> <a href="https://github.com/ru1ch3n/PDE-OBS">[Code]</a></span>
+        </p></li>
+<li><p>
           <span class="news-prefix"><span class="news-date">[2026.09]</span>
           <span class="news-tag tag-paper">PAPER</span></span>
           <span class="news-text">Our paper, <a href="https://openreview.net/forum?id=bA2bMEOUFL">Towards Principled Test-Time Adaptation for Time Series Forecasting</a>, was <strong>accepted at TMLR with minor revision</strong>. <a href="https://arxiv.org/abs/2605.17250">[arXiv]</a></span>
@@ -152,7 +162,39 @@
           <span class="news-text">Our work on <a href="https://openreview.net/forum?id=pMD7A77k3i">Coordinate Transform Fourier Neural Operators</a> published in <strong>TMLR</strong>.</span>
         </p></li></ul></div></section>
 <section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2><a href="papers.html">All publications</a></div>
-<ol class="paper-list"><li class="paper paper-with-figure" id="selected-tta-forecasting">
+<ol class="paper-list"><li class="paper paper-with-figure" id="selected-scope">
+      <figure class="paper-figure">
+          <a href="assets/papers/scope.png" target="_blank" rel="noopener" aria-label="View illustration from SCOPE: Observation-Conditioned Full-Target Prediction for Sparse PDE Inference at full size">
+            <img src="assets/papers/scope.png" alt="SCOPE overview showing changing observation coverage, observation-conditioned predictions, and full-field latent and physical reconstruction targets." width="1413" height="798" loading="lazy" decoding="async">
+          </a>
+        </figure>
+      <div class="paper-copy">
+      <h3 class="paper-title"><a href="https://arxiv.org/abs/2609.36527">SCOPE: Observation-Conditioned Full-Target Prediction for Sparse PDE Inference</a></h3>
+      <p class="authors"><strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jiacheng Qiu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Prakhar Mehrotra, Yann LeCun, Yuefan Deng</p>
+      <p class="venue"><strong>arXiv:2609.36527 · 2026</strong></p>
+      <p class="paper-summary">Couples full-field latent prediction with physical reconstruction to recover complete PDE fields from sparse observations in a single pass.</p>
+
+
+      <div class="paper-links"><a href="https://arxiv.org/abs/2609.36527">arXiv</a> <a href="https://arxiv.org/pdf/2609.36527">PDF</a> <a href="https://github.com/ru1ch3n/SCOPE">Code</a></div>
+      </div>
+    </li>
+<li class="paper paper-with-figure" id="selected-pde-obs">
+      <figure class="paper-figure">
+          <a href="assets/papers/pde-obs.png" target="_blank" rel="noopener" aria-label="View illustration from PDE-OBS: Controlled Evaluation Across Observation Patterns at full size">
+            <img src="assets/papers/pde-obs.png" alt="PDE-OBS overview linking seven PDE families, controlled observation patterns, and reconstruction and forecasting under matched and shifted observations." width="1413" height="798" loading="lazy" decoding="async">
+          </a>
+        </figure>
+      <div class="paper-copy">
+      <h3 class="paper-title"><a href="https://arxiv.org/abs/2609.36521">PDE-OBS: Controlled Evaluation Across Observation Patterns</a></h3>
+      <p class="authors"><strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jiacheng Qiu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Yann LeCun, Yuefan Deng</p>
+      <p class="venue"><strong>arXiv:2609.36521 · 2026</strong></p>
+      <p class="paper-summary">Benchmarks PDE reconstruction and forecasting across changing observation patterns while holding physical records, prediction targets, and data splits fixed.</p>
+
+
+      <div class="paper-links"><a href="https://arxiv.org/abs/2609.36521">arXiv</a> <a href="https://arxiv.org/pdf/2609.36521">PDF</a> <a href="https://github.com/ru1ch3n/PDE-OBS">Code</a></div>
+      </div>
+    </li>
+<li class="paper paper-with-figure" id="selected-tta-forecasting">
       <figure class="paper-figure">
           <a href="assets/papers/tta-forecasting.png" target="_blank" rel="noopener" aria-label="View illustration from Towards Principled Test-Time Adaptation for Time Series Forecasting at full size">
             <img src="assets/papers/tta-forecasting.png" alt="Frequency-Aware Calibration overview shows input and output frequency-domain calibration around a frozen forecaster, adaptation using the latest matured mini-batch, and re-forecasting of the current mini-batch." width="2727" height="1284" loading="lazy" decoding="async">

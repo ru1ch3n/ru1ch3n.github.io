@@ -2,6 +2,28 @@
   {
     "date": "September 2026",
     "display_date": "2026.09",
+    "sort_date": "2026-09-29",
+    "tag": "PAPER",
+    "title": "SCOPE available on arXiv",
+    "html": "<a href=\"https://arxiv.org/abs/2609.36527\"><strong>SCOPE</strong></a>, our work on single-pass PDE recovery from sparse observations, is available on arXiv. <a href=\"https://arxiv.org/pdf/2609.36527\">[PDF]</a> <a href=\"https://github.com/ru1ch3n/SCOPE\">[Code]</a>",
+    "paper_ids": [
+      "scope"
+    ]
+  },
+  {
+    "date": "September 2026",
+    "display_date": "2026.09",
+    "sort_date": "2026-09-29",
+    "tag": "PAPER",
+    "title": "PDE-OBS available on arXiv",
+    "html": "<a href=\"https://arxiv.org/abs/2609.36521\"><strong>PDE-OBS</strong></a>, our benchmark for evaluating PDE models across observation patterns, is available on arXiv. <a href=\"https://arxiv.org/pdf/2609.36521\">[PDF]</a> <a href=\"https://github.com/ru1ch3n/PDE-OBS\">[Code]</a>",
+    "paper_ids": [
+      "pde-obs"
+    ]
+  },
+  {
+    "date": "September 2026",
+    "display_date": "2026.09",
     "sort_date": "2026-09-16",
     "tag": "PAPER",
     "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting accepted at TMLR with minor revision",
