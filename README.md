@@ -16,6 +16,7 @@ The September 2026 redesign takes its layout cues from [Chenyu You’s academic 
 - `assets/Ruichen_Xu_CV.pdf` — current curriculum vitae
 - `data/papers.json` — 21 bibliography records, including 7 arXiv preprints and 1 submitted manuscript
 - `data/news.json` — news records migrated from the existing site
+- `data/collaborators.json` — verified collaborator homepages and individual institutional profiles linked throughout the site
 - `data/service.json` — conference, journal, and workshop reviewing, plus the ICML 2026 Gold Reviewer recognition
 - `assets/papers/` — source figures for publications and manuscripts where available
 - `data/figure-sources.json` — figure numbers, source versions, and provenance

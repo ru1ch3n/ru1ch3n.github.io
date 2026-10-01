@@ -2,6 +2,17 @@
   "page_numbering": "1-based PDF pages",
   "figures": [
     {
+      "id": "scc-tvg",
+      "image": "assets/papers/scc-tvg.png",
+      "source_title": "Less Data, Better Timing: Student-Curriculum Coupling for VLM On-Policy Distillation in Temporal Video Grounding",
+      "source_kind": "author-posted arXiv HTML",
+      "figure_number": 2,
+      "sha256": "81d71120db227678bc0bcdb5f4a4c83fa83eca6df3936cb90044373268344f28",
+      "source_url": "https://arxiv.org/html/2609.40055v1/method.png",
+      "source_version": "arXiv v1, 30 September 2026",
+      "caption_verified": true
+    },
+    {
       "id": "scope",
       "image": "assets/papers/scope.png",
       "source_title": "SCOPE: Observation-Conditioned Full-Target Prediction for Sparse PDE Inference",

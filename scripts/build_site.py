@@ -12,10 +12,12 @@ import re
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
-PAPERS = json.loads((ROOT / 'data/papers.json').read_text())
-NEWS = json.loads((ROOT / 'data/news.json').read_text())
-SERVICE = json.loads((ROOT / 'data/service.json').read_text())
+PAPERS = json.loads((ROOT / 'data/papers.json').read_text(encoding='utf-8'))
+NEWS = json.loads((ROOT / 'data/news.json').read_text(encoding='utf-8'))
+SERVICE = json.loads((ROOT / 'data/service.json').read_text(encoding='utf-8'))
+COLLABORATORS = json.loads((ROOT / 'data/collaborators.json').read_text(encoding='utf-8'))
 ESC = html.escape
+COLLABORATOR_NAMES = re.compile(r'(?<!\w)(?:' + '|'.join(re.escape(name) for name in sorted(COLLABORATORS, key=len, reverse=True)) + r')(?!\w)')
 DATE = 'September 2026'
 PROFILES = [
     ('Google Scholar', 'https://scholar.google.com/citations?user=IBXYwoQAAAAJ'),
@@ -28,6 +30,22 @@ PROFILES = [
 
 def link(label, url):
     return f'<a href="{ESC(url, quote=True)}">{ESC(label)}</a>'
+
+
+def link_collaborators(markup):
+    """Link verified names in text nodes, preserving existing links and markup."""
+    parts = re.split(r'(<[^>]+>)', markup)
+    inside_link = 0
+    for index, part in enumerate(parts):
+        if part.startswith('<'):
+            if re.match(r'<a\b', part, re.IGNORECASE):
+                inside_link += 1
+            elif re.match(r'</a\s*>', part, re.IGNORECASE):
+                inside_link -= 1
+        elif not inside_link:
+            parts[index] = COLLABORATOR_NAMES.sub(
+                lambda match: link(match.group(), COLLABORATORS[match.group()]), part)
+    return ''.join(parts)
 
 
 def profile_links():
@@ -53,6 +71,7 @@ def navigation(current):
 
 
 def page(filename, title, description, body, home=False):
+    body = link_collaborators(body)
     canonical = 'https://ru1ch3n.github.io/' + ('' if home else filename)
     heading = 'Ruichen Xu <span class="name-cn" lang="zh">徐瑞辰</span>' if home else ESC(title)
     pronunciation = '<p class="name-pronunciation"><span>普通话 · Mandarin (Pinyin): <span lang="zh-Latn-pinyin">Xú Ruìchén</span></span><br><span>粤语 · Cantonese (Jyutping): <span lang="yue-Latn-jyutping">ceoi4 seoi6 san4</span></span></p>' if home else ''
@@ -96,7 +115,7 @@ def page(filename, title, description, body, home=False):
 </body>
 </html>
 '''
-    (ROOT / filename).write_text('\n'.join(line.rstrip() for line in result.splitlines()) + '\n')
+    (ROOT / filename).write_text('\n'.join(line.rstrip() for line in result.splitlines()) + '\n', encoding='utf-8')
 
 
 def paper_item(p, selected=False):
@@ -323,10 +342,10 @@ for year in [2026, 2025, 2024]:
 page('news.html', 'News', 'Research, publication, teaching, and mentoring updates from Ruichen Xu.', news_body)
 
 # Retain the legacy introductory record with the same current homepage copy.
-(ROOT / 'data/intro.json').write_text(json.dumps({'html': INTRO}, ensure_ascii=False, indent=2) + '\n')
+(ROOT / 'data/intro.json').write_text(json.dumps({'html': link_collaborators(INTRO)}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 urls = ['https://ru1ch3n.github.io/' + ('' if name == 'index.html' else name) for name in ['index.html', 'bio.html', 'research.html', 'papers.html', 'teaching.html', 'news.html']]
-updated_urls = {'https://ru1ch3n.github.io/' + name for name in ['', 'papers.html', 'news.html']}
-(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{url}</loc><lastmod>{"2026-09-30" if url in updated_urls else "2026-09-09"}</lastmod></url>\n' for url in urls) + '</urlset>\n')
+updated_urls = {'https://ru1ch3n.github.io/' + name for name in ['', 'bio.html', 'papers.html', 'news.html']}
+(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{url}</loc><lastmod>{"2026-09-30" if url in updated_urls else "2026-09-09"}</lastmod></url>\n' for url in urls) + '</urlset>\n', encoding='utf-8')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--stage', action='store_true', help='Copy the published site to dist/ for private review.')

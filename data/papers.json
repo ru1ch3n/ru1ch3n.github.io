@@ -16,7 +16,13 @@
         "url": "https://arxiv.org/pdf/2609.40055"
       }
     ],
-    "summary": "Adapts a compact training curriculum to the student model's evolving competence, improving temporal video grounding with fewer examples and less training time."
+    "summary": "Adapts a compact training curriculum to the student model's evolving competence, improving temporal video grounding with fewer examples and less training time.",
+    "figure": {
+      "path": "assets/papers/scc-tvg.png",
+      "alt": "Student–Curriculum Coupling: successive training batches assess current student competence to activate, reactivate, or suspend on-policy distillation supervision.",
+      "width": 2034,
+      "height": 944
+    }
   },
   {
     "id": "scope",
