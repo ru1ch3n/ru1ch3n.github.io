@@ -190,7 +190,7 @@ home = f'''<section class="profile" aria-label="Profile and contact">
 <section aria-labelledby="news"><div class="section-top"><h2 id="news">News</h2>{link('All news', 'news.html')}</div>
 <div class="news-window" tabindex="0" role="region" aria-label="Recent news, scroll for older updates">{news_list(NEWS)}</div></section>
 <section aria-labelledby="selected-publications"><div class="section-top"><h2 id="selected-publications">Selected publications</h2>{link('All publications', 'papers.html')}</div>
-{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['scope', 'pde-obs', 'tta-forecasting', 'hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
+{paper_list([next(p for p in PAPERS if p['id'] == identifier) for identifier in ['scc-tvg', 'scope', 'pde-obs', 'tta-forecasting', 'hp-jepa', 'iaga', 'multistep-backmapping', 'discretization', 'kar-hnn', 'apod', 'dsfno']], selected=True)}
 </section>
 <section aria-labelledby="academic-service"><div class="section-top"><h2 id="academic-service">Academic service</h2>{link('Reviewing experience', 'bio.html#service')}</div>
 {recognition()}
@@ -325,8 +325,8 @@ page('news.html', 'News', 'Research, publication, teaching, and mentoring update
 # Retain the legacy introductory record with the same current homepage copy.
 (ROOT / 'data/intro.json').write_text(json.dumps({'html': INTRO}, ensure_ascii=False, indent=2) + '\n')
 urls = ['https://ru1ch3n.github.io/' + ('' if name == 'index.html' else name) for name in ['index.html', 'bio.html', 'research.html', 'papers.html', 'teaching.html', 'news.html']]
-updated_urls = {'https://ru1ch3n.github.io/' + name for name in ['', 'research.html', 'papers.html', 'news.html']}
-(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{url}</loc><lastmod>{"2026-09-29" if url in updated_urls else "2026-09-09"}</lastmod></url>\n' for url in urls) + '</urlset>\n')
+updated_urls = {'https://ru1ch3n.github.io/' + name for name in ['', 'papers.html', 'news.html']}
+(ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{url}</loc><lastmod>{"2026-09-30" if url in updated_urls else "2026-09-09"}</lastmod></url>\n' for url in urls) + '</urlset>\n')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--stage', action='store_true', help='Copy the published site to dist/ for private review.')

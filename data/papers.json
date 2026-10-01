@@ -1,5 +1,24 @@
 [
   {
+    "id": "scc-tvg",
+    "title": "Less Data, Better Timing: Student-Curriculum Coupling for VLM On-Policy Distillation in Temporal Video Grounding",
+    "authors_html": "Jiacheng Qiu, Yunsoo Kim, <strong>Ruichen Xu</strong>, Jian Luo, Petar M. Djurić, Sima Mofakham",
+    "venue": "arXiv:2609.40055 · 2026",
+    "category": "preprints",
+    "year": 2026,
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40055"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40055"
+      }
+    ],
+    "summary": "Adapts a compact training curriculum to the student model's evolving competence, improving temporal video grounding with fewer examples and less training time."
+  },
+  {
     "id": "scope",
     "title": "SCOPE: Observation-Conditioned Full-Target Prediction for Sparse PDE Inference",
     "authors_html": "<strong>Ruichen Xu</strong>, Siyao Wang, Fang Wan, Jiacheng Qiu, Wenhan Gao, Jiaxing Zhang, Linsey Pang, Ravid Shwartz-Ziv, Prakhar Mehrotra, Yann LeCun, Yuefan Deng",

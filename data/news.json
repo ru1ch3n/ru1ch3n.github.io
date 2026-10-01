@@ -2,6 +2,17 @@
   {
     "date": "September 2026",
     "display_date": "2026.09",
+    "sort_date": "2026-09-30",
+    "tag": "PAPER",
+    "title": "Student-Curriculum Coupling for temporal video grounding available on arXiv",
+    "html": "Our paper on <a href=\"https://arxiv.org/abs/2609.40055\"><strong>Student-Curriculum Coupling for temporal video grounding</strong></a> is available on arXiv. <a href=\"https://arxiv.org/pdf/2609.40055\">[PDF]</a>",
+    "paper_ids": [
+      "scc-tvg"
+    ]
+  },
+  {
+    "date": "September 2026",
+    "display_date": "2026.09",
     "sort_date": "2026-09-29",
     "tag": "PAPER",
     "title": "SCOPE available on arXiv",

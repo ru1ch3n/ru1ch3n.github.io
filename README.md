@@ -14,10 +14,10 @@ The September 2026 redesign takes its layout cues from [Chenyu You’s academic 
 - `news.html` — research timeline
 - `assets/academic.css` — shared responsive academic layout
 - `assets/Ruichen_Xu_CV.pdf` — current curriculum vitae
-- `data/papers.json` — 20 bibliography records, including 6 arXiv preprints and 1 submitted manuscript
+- `data/papers.json` — 21 bibliography records, including 7 arXiv preprints and 1 submitted manuscript
 - `data/news.json` — news records migrated from the existing site
 - `data/service.json` — conference, journal, and workshop reviewing, plus the ICML 2026 Gold Reviewer recognition
-- `assets/papers/` — one source figure for every publication and manuscript
+- `assets/papers/` — source figures for publications and manuscripts where available
 - `data/figure-sources.json` — figure numbers, source versions, and provenance
 - `scripts/build_site.py` — shared navigation, page copy, and static HTML renderer
 
@@ -29,7 +29,7 @@ Edit publication and news records in `data/`. Edit other page copy and shared na
 python scripts/build_site.py
 ```
 
-Each paper’s `figure` record contains its local image path, dimensions, descriptive alt text, and display label. Figures appear beside the citation and open at full size. The active-learning visual is explicitly labeled as an author-poster overview; the other images come from the papers or their author manuscripts. Preserve this distinction when replacing an image. GAGA is listed under its published title, while the original `iaga` anchor remains stable.
+When present, a paper’s `figure` record contains its local image path, dimensions, descriptive alt text, and display label. Figures appear beside the citation and open at full size. The active-learning visual is explicitly labeled as an author-poster overview; the other images come from the papers or their author manuscripts. Preserve this distinction when replacing an image. GAGA is listed under its published title, while the original `iaga` anchor remains stable.
 
 Public arXiv records link to both their abstract and PDF. SCOPE and PDE-OBS use the title and author order in their 29 September 2026 arXiv v1 metadata, link to their public code repositories, and appear in the homepage selections, research topics, and news. Their Figure 1 thumbnails come from page 2 of each public preprint. The earlier VI-HNN preprint and its later NYSDS proceedings paper have different titles and author lists and are explicitly distinguished. JENO links to the actual OpenReview submission with an access note and manuscript-request link; no arXiv identifier or public access is implied. Paper announcements in the news carry direct paper links, with additional arXiv links where available.
 
