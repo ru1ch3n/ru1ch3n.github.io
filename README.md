@@ -13,7 +13,7 @@ The September 2026 redesign takes its layout cues from [Chenyu You’s academic 
 - `bio.html` — biography, education, experience, talks, and service
 - `news.html` — research timeline
 - `assets/academic.css` — shared responsive academic layout
-- `assets/Ruichen_Xu_CV.pdf` — current curriculum vitae
+- `assets/Ruichen_CV.pdf` — current curriculum vitae
 - `data/papers.json` — 21 bibliography records, including 7 arXiv preprints and 1 submitted manuscript
 - `data/news.json` — news records migrated from the existing site
 - `data/collaborators.json` — verified collaborator homepages and individual institutional profiles linked throughout the site

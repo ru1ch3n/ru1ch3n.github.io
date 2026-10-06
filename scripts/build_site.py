@@ -24,7 +24,7 @@ PROFILES = [
     ('GitHub', 'https://github.com/ru1ch3n'),
     ('OpenReview', 'https://openreview.net/profile?id=~Ruichen_Xu2'),
     ('LinkedIn', 'https://www.linkedin.com/in/ruichen-xu-b30b55197/'),
-    ('CV', 'assets/Ruichen_Xu_CV.pdf'),
+    ('CV', 'assets/Ruichen_CV.pdf'),
 ]
 
 
@@ -58,7 +58,7 @@ def navigation(current):
         ('', [('Home', 'index.html'), ('Bio', 'bio.html'), ('Academic service', 'bio.html#service')]),
         ('Research', [('Topics', 'research.html'), ('Papers', 'papers.html')]),
         ('Teaching', [('Courses & mentoring', 'teaching.html')]),
-        ('Updates', [('News', 'news.html'), ('Curriculum vitae', 'assets/Ruichen_Xu_CV.pdf')]),
+        ('Updates', [('News', 'news.html'), ('Curriculum vitae', 'assets/Ruichen_CV.pdf')]),
     ]
     parts = []
     for heading, items in groups:
@@ -109,7 +109,7 @@ def page(filename, title, description, body, home=False):
   <main class="main" id="main" tabindex="-1">
     <header class="page-title"><h1>{heading}</h1>{pronunciation}</header>
     {body}
-    <footer class="footer"><p>© 2026 Ruichen Xu · Updated {DATE}</p><p>{link('Email', 'mailto:ruichen.xu@stonybrook.edu')} · {link('CV', 'assets/Ruichen_Xu_CV.pdf')}</p></footer>
+    <footer class="footer"><p>© 2026 Ruichen Xu · Updated {DATE}</p><p>{link('Email', 'mailto:ruichen.xu@stonybrook.edu')} · {link('CV', 'assets/Ruichen_CV.pdf')}</p></footer>
   </main>
 </div>
 </body>
@@ -307,7 +307,7 @@ bio = jump_links([('Biography', 'biography'), ('Education', 'education'), ('Expe
 <p>Ruichen Xu (Bill Xu) is a Ph.D. candidate in Computational Applied Mathematics at Stony Brook University, advised by Dr. Yuefan Deng. His research focuses on scientific machine learning, including neural operators for partial observations and inverse problems, predictive representation learning, physics-aware generative models, and LLM-guided optimization.</p>
 <p>He received an M.S. in Mathematics from the Courant Institute at New York University, an M.S. in Statistics from the University of California, Davis, and a bachelor’s degree in Financial Mathematics from Beijing University of Chemical Technology.</p>
 <p>Alongside research, he teaches applied mathematics and mentors AI4Science projects at Stony Brook University. His work is supported by reproducible training and evaluation pipelines for large-scale experiments.</p>
-<p><a href="assets/Ruichen_Xu_CV.pdf">Curriculum vitae (PDF)</a> · <a href="mailto:ruichen.xu@stonybrook.edu">Email</a></p>
+<p><a href="assets/Ruichen_CV.pdf">Curriculum vitae (PDF)</a> · <a href="mailto:ruichen.xu@stonybrook.edu">Email</a></p>
 </section>
 <section aria-labelledby="education"><h2 id="education">Education</h2>
 <ul class="record-list">
